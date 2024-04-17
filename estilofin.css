@@ -27,6 +27,11 @@ body {
 /* Estilos para el icono cancel */
 .material-symbols-outlined{
     font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.material-symbols-outlined:hover {
+    transform: scale(1.2); 
 }
 
 /* Estilos para los iconos de estrella */
@@ -43,6 +48,7 @@ h1 {
     margin-bottom: 5px;
     margin-top: 35px;
     padding: 1%;
+    animation: temblar 3.5s ease infinite;
 }
 
 h2{
@@ -51,6 +57,7 @@ h2{
     margin-top: 20px;
     padding: 1%;
     font-size: 20px;
+    animation: temblar 2.5s ease infinite;
 }
 /* Estilos para las imágenes */
 img {
@@ -58,6 +65,7 @@ img {
     height: 150px;
     width: 150px;
     margin-top: 15px;
+    animation: vibrarLogo 1s infinite alternate;
 }
 
 /* Estilos específicos para la clase 'center' */
@@ -77,13 +85,6 @@ a {
     margin-left: 30px;
 }
 
-/* Estilos para el contenedor de las estrellas */
-.star-container {
-    text-align: center;
-    margin-top: 5px;
-}
-
-
 /* Estilos para la animación de confeti */
 @keyframes confeti {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
@@ -95,7 +96,7 @@ a {
     width: 10px;
     height: 10px;
     background-color: rgb(207, 171, 80); /* Color del confeti */
-    animation: confeti 3s ease-out; /* Duración y tipo de animación */
+    animation: confeti 3s ease infinite; /* Duración y tipo de animación */
 }
 
 @keyframes desplazar {
@@ -110,3 +111,31 @@ a {
 .desplazamiento-arriba {
     animation: desplazar 1s ease-out;
 }
+
+
+@keyframes temblar {
+    0% {
+        transform: translateX(-2px) rotate(0deg);
+    }
+    25% {
+        transform: translateX(2px) rotate(-2deg);
+    }
+    50% {
+        transform: translateX(-2px) rotate(2deg);
+    }
+    75% {
+        transform: translateX(2px) rotate(-2deg);
+    }
+    100% {
+        transform: translateX(-2px) rotate(0deg);
+    }
+}
+
+@keyframes vibrarLogo {
+    0% {
+      transform: translateY(-3px); 
+    }
+    100% {
+      transform: translateY(3px); 
+    }
+  }

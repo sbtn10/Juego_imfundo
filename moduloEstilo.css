@@ -1,6 +1,7 @@
 h1 {
     font-family: "Inter", sans-serif;
     font-weight: bold;
+    animation: vibrarLogo 1.0s infinite alternate;
     font-style: normal;
     color: #1D4989;
     font-size: 75px;
@@ -35,6 +36,7 @@ body {
 
   .parrafo{
     margin-top: 10px;
+    animation: vibrarLogo 1.0s infinite alternate;
     font-size: 30px;
     color: aliceblue;
   }
@@ -45,5 +47,29 @@ body {
     border: 10px solid #1D4989;
     cursor: pointer;
     color: #1D4989;
+    text-decoration: none;
+    text-transform: uppercase;
   
+  }
+
+  .logo-img {
+
+    margin-top: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: vibrarLogo 1.0s infinite alternate;
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes vibrarLogo {
+    0% {
+      transform: translateY(-3px);
+    }
+  
+    100% {
+      transform: translateY(3px);
+    }
   }

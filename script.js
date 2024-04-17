@@ -1,4 +1,11 @@
 let clicado = false;
+var flechaSound = document.getElementById('flechaSound');
+
+document.getElementById('flecha').addEventListener('click', function() {
+    flechaSound.currentTime = 0;
+    flechaSound.volume=0.1;
+    flechaSound.play();
+})
 
 // Función para manejar el redireccionamiento de los botones del primer conjunto
 function handleFirstSet(event) {
@@ -47,3 +54,20 @@ document.getElementById('flecha').addEventListener('click', function() {
     }
     clicado = !clicado;
 });
+
+function reproducirSonidoHover() {
+    var sonidoHover = document.getElementById('hoverSound');
+    sonidoHover.volume=0.1;
+    sonidoHover.currentTime = 0; // Reinicia el sonido para reproducirlo desde el principio
+    sonidoHover.play();
+}
+
+document.getElementById('btn1').addEventListener('mouseover', reproducirSonidoHover);
+document.getElementById('btn2').addEventListener('mouseover', reproducirSonidoHover);
+document.getElementById('btn3').addEventListener('mouseover', reproducirSonidoHover);
+document.getElementById('btn4').addEventListener('mouseover', reproducirSonidoHover);
+document.getElementById('btn5').addEventListener('mouseover', reproducirSonidoHover);
+document.getElementById('btn6').addEventListener('mouseover', reproducirSonidoHover);
+
+var audio = document.getElementById('audioElement');
+        audio.volume = 0.5;

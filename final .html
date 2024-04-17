@@ -30,11 +30,11 @@
                 </span>
             </a>
         </div>
-        
+
         <h1>
             ¡Felicidades, has completado todos los desafíos del modulo!
         </h1>
-        <center><img src="./imagen/corona.jpg" alt="corona"></center>
+        <center><img src="./imagen/corona.jpg" alt="corona" class="corona"></center>
 
         <center>
             <img src="./imagen/estrella.png" alt="estrella1" class="estrella" id="estrella1">
@@ -48,55 +48,54 @@
 
 
     </div>
+
+    <audio id="audioElement" autoplay>
+        <source src="audio/claps.mp3" type="audio/mp3">
+    </audio>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var estrellas = document.querySelectorAll(".estrella"); // Obtener todas las estrellas
-    
-            // Ocultar todas las estrellas al principio
+            var estrellas = document.querySelectorAll(".estrella");
+
             estrellas.forEach(function (estrella) {
-                estrella.style.opacity = "0"; // Comienza oculta
+                estrella.style.opacity = "0";
             });
-    
-            // Función para mostrar las estrellas
+
             function mostrarEstrella(i) {
                 if (i < estrellas.length) {
                     setTimeout(function () {
-                        estrellas[i].style.opacity = "1"; // Aparece
-                        mostrarEstrella(i + 1); // Llamar recursivamente para mostrar la siguiente estrella
+                        estrellas[i].style.opacity = "1";
+                        mostrarEstrella(i + 1);
                     }, 1000);
                 } else {
-                    // Después de mostrar todas las estrellas, crear confetis
+
                     setTimeout(() => {
-                        for (let i = 0; i < 100; i++) { // Crear 100 confetis
+                        for (let i = 0; i < 200; i++) {
                             setTimeout(() => {
                                 crearConfeti();
-                            }, i * 30); // Espaciar la creación de confetis
+                            }, i * 30);
                         }
-                    }, 500); // Espera 0.5 segundos después de mostrar las estrellas
+                    }, 500);
                 }
             }
-    
-            // Función para crear un confeti dentro del área visible de la página
+
             function crearConfeti() {
                 const confeti = document.createElement('div');
                 confeti.classList.add('confeti');
-                confeti.style.left = Math.random() * (window.innerWidth - 10) + 'px'; // Ajustar posición
-                confeti.style.top = Math.random() * (window.innerHeight - 10) + 'px'; // Ajustar posición
+                confeti.style.left = Math.random() * (window.innerWidth - 10) + 'px';
+                confeti.style.top = Math.random() * (window.innerHeight - 10) + 'px';
                 document.body.appendChild(confeti);
-    
-                // Eliminar el confeti después de la animación
+
                 confeti.addEventListener('animationend', () => {
                     confeti.remove();
                 });
             }
-    
-            // Llamar a la función para mostrar estrella
+
             mostrarEstrella(0);
         });
+        var audio = document.getElementById('audioElement');
+        audio.volume = 0.1;
     </script>
-        
-    
-
 </body>
 
 </html>
