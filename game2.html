@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 2</title>
+    <link rel="stylesheet" href="estilo2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="texto">¡Reto 2: Completa las oraciones con el verbo ser según corresponda!</p>
+        <div class="info">
+            <p style="color: #D67D7D;">Vidas</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D67D7D" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D67D7D" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D67D7D" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+        </div>
+
+    </div>
+
+    <div class="oraciones">
+        <p>1. Nosotros <span class="contenedor" id="contenedor1" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span> una gran familia.</p>
+        <p>2. Tú <span class="contenedor" id="contenedor2" ondrop="drop(event)" ondragover="allowDrop(event)"></span> un
+            gran cirujano.</p>
+        <p>3. Mis zapatos <span class="contenedor" id="contenedor3" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span> de color negro.</p>
+        <p>4. Yo <span class="contenedor" id="contenedor4" ondrop="drop(event)" ondragover="allowDrop(event)"></span> un
+            investigador.</p>
+        <p>5. El cielo <span class="contenedor" id="contenedor5" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span> de color azul.</p>
+    </div>
+
+    <div class="botones" id="botones-container">
+        <button class="boton" id="boton1" draggable="true" ondragstart="drag(event)" data-posicion="1">son</button>
+        <button class="boton" id="boton2" draggable="true" ondragstart="drag(event)" data-posicion="2">es</button>
+        <button class="boton" id="boton3" draggable="true" ondragstart="drag(event)" data-posicion="3">somos</button>
+        <button class="boton" id="boton4" draggable="true" ondragstart="drag(event)" data-posicion="4">soy</button>
+        <button class="boton" id="boton5" draggable="true" ondragstart="drag(event)" data-posicion="5">eres</button>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center; font-family: 'Press Start 2P', cursive;">GAME OVER</h2>
+            <div class="modal-buttons">
+                <button id="reintentarBtn">Reintentar</button>
+                <button id="salirBtn">Salir</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <audio id="audioElement" autoplay loop>
+        <source src="/audio/level.mp3" type="audio/mp3">
+    </audio>
+    <script src="sc.js"></script>
+</body>
+
+</html>

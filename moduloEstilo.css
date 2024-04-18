@@ -41,16 +41,21 @@ body {
     color: aliceblue;
   }
 
-  .btn_mod1{
+  .btn_mod1 {
     margin-top: 20px;
     font-size: 30px;
     border: 10px solid #1D4989;
     cursor: pointer;
     color: #1D4989;
-    text-decoration: none;
-    text-transform: uppercase;
-  
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Agregar transiciones suaves */
   }
+
+.btn_mod1:hover {
+    background-color: aliceblue; /* Cambiar el color de fondo al pasar el mouse */
+    border-color: rgba(29, 73, 137, 0.5); /* Cambiar el color del borde al pasar el mouse */
+    transform: scale(1.1); /* Hacer un efecto de zoom en el texto al pasar el mouse */
+    box-shadow: 0 0 20px rgba(29, 73, 137, 0.8); /* Añadir una sombra al borde */
+}
 
   .logo-img {
 

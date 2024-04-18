@@ -70,4 +70,4 @@ document.getElementById('btn5').addEventListener('mouseover', reproducirSonidoHo
 document.getElementById('btn6').addEventListener('mouseover', reproducirSonidoHover);
 
 var audio = document.getElementById('audioElement');
-        audio.volume = 0.5;
+        audio.volume = 0.3;
