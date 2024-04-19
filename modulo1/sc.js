@@ -49,6 +49,19 @@ function validarRespuesta(contenedor, botonId) {
             mostrarGameOver();
         }
     }
+
+    // Verificar si todos los botones están en el contenedor correcto
+    const botonesCorrectos = Array.from(document.querySelectorAll('.contenedor')).every(contenedor => contenedor.children.length > 0);
+    if (botonesCorrectos) {
+
+        const arrowIcon = document.getElementById('arrow-icon');
+        arrowIcon.style.display = 'block';
+
+        // Agregar el evento clic a la flecha para redireccionar
+        arrowIcon.addEventListener('click', function() {
+            window.location.href = '../final.html';
+        });
+    }
 }
 function mostrarGameOver() {
     const modalGameOver = document.getElementById('gameOverModal');
@@ -64,7 +77,7 @@ function mostrarGameOver() {
 
     salirBtn.addEventListener('click', function() {
         modalGameOver.style.display = 'none';
-        window.location.href='index.html'
+        window.location.href='../index.html'
     });
 
     audio.volume=0.0;
