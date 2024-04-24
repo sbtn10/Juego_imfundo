@@ -58,7 +58,7 @@ function validarRespuesta(contenedor, botonId) {
         arrowIcon.style.display = 'block';
 
         // Agregar el evento clic a la flecha para redireccionar
-        arrowIcon.addEventListener('click', function() {
+        arrowIcon.addEventListener('click', function () {
             window.location.href = '../final.html';
         });
     }
@@ -70,21 +70,21 @@ function mostrarGameOver() {
     const reintentarBtn = document.getElementById('reintentarBtn');
     const salirBtn = document.getElementById('salirBtn');
 
-    reintentarBtn.addEventListener('click', function() {
+    reintentarBtn.addEventListener('click', function () {
         modalGameOver.style.display = 'none';
-        window.location.href='game2.html'
+        window.location.href = 'game2.html'
     });
 
-    salirBtn.addEventListener('click', function() {
+    salirBtn.addEventListener('click', function () {
         modalGameOver.style.display = 'none';
-        window.location.href='../index.html'
+        window.location.href = '../index.html'
     });
 
-    audio.volume=0.0;
+    audio.volume = 0.0;
 
     const gameOver = new Audio('/audio/gameover.mp3');
     gameOver.play();
-    gameOver.volume=0.5;
+    gameOver.volume = 0.5;
 }
 function obtenerBotonCorrecto(contenedorId) {
     switch (contenedorId) {
@@ -103,5 +103,35 @@ function obtenerBotonCorrecto(contenedorId) {
     }
 }
 
+const muteIcon = document.getElementById('mute-icon');
 var audio = document.getElementById('audioElement');
-      audio.volume = 0.03;
+audio.volume = 0.03;
+
+let isMuted = false;
+
+muteIcon.addEventListener('click', () => {
+    if (!isMuted) {
+        audio.muted = true; // Silenciar el audio
+        isMuted = true;
+    } else {
+        audio.muted = false; // Activar el audio
+        isMuted = false;
+    }
+});
+
+
+// Obtener el botón y el modal
+var openModalBtn = document.getElementById('openModalBtn');
+var modal = document.getElementById('myModal');
+
+// Función para abrir el modal
+openModalBtn.addEventListener('click', function() {
+    modal.style.display = 'block';
+});
+
+// Función para cerrar el modal al hacer clic fuera de él
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});

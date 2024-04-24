@@ -1,10 +1,11 @@
 body {
     padding: 0;
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right,#FBF2F2, white,#fbf2f29a);
 }
 
 .container {
-    background-color: #FBF2F2;
+    background-image: linear-gradient(to right, #ffbb00,#FD8C00);
     border-radius: 2pc;
     border: none;
     width: 80%;
@@ -15,6 +16,7 @@ body {
     margin-left: 30px;
     padding: 0 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    animation: vibrarLogo 1s infinite alternate;
 }
 
 .texto {
@@ -71,6 +73,7 @@ body {
     height: 40px;
     border-radius: 2cap;
     background-color: greenyellow;
+    font-size: 15px;
 }
 
 .botones {
@@ -91,6 +94,7 @@ body {
     width: 90px;
     height: 40px;
     margin-right: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -142,6 +146,32 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
+/* Estilos para el modal */
+.modalAy {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Help-content {
+    position: relative;
+    width: 583px;
+    background-color:transparent;
+    top: 20%;
+    left:30%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+
 .modal-buttons button:hover {
     background-color: #ff0;
     color: #000;
@@ -181,9 +211,17 @@ body {
 
 /* Animación para mover la flecha de izquierda a derecha */
 @keyframes moveArrow {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(20px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* Aplicar la animación a la flecha */
@@ -191,44 +229,52 @@ body {
     animation: moveArrow 2s ease infinite;
 }
 
+/* Estilos para el icono Mute */
+#mute-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+}
 
-@media (min-width: 890px) {
+/* Estilos cuando se pasa el cursor sobre el icono */
+#mute-icon:hover {
+    fill: #655d5d;
+}
+
+
+@keyframes vibrarLogo {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+@media (min-width: 935px) {
     body {
         margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
     }
 
     .container {
-        background-color: #FBF2F2;
-        border-radius: 2pc;
-        border: none;
-        width: 90%;
         max-width: 1289px;
-        height: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
+        height: 100px;
         margin-left: auto;
         margin-right: auto;
-        padding: 0 25px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     }
 
     .texto {
-        font-size: 20px;
-        font-weight: bold;
-        color: #000;
+        font-size: 18px;
     }
 
 
     .info {
-        display: flex;
-        align-items: center;
         margin-left: auto;
-        background-color: white;
-        border-radius: 2cap;
         width: 200px;
         justify-content: center;
     }
@@ -243,44 +289,17 @@ body {
     }
 
     .oraciones {
-        margin-top: 40px;
         margin-left: 10%;
         float: left;
     }
 
     .oraciones p {
-        margin-bottom: 40px;
         font-size: 25px;
-    }
-
-    /* Estilos para los contenedores vacíos */
-    .contenedor {
-        display: inline-block;
-        vertical-align: middle;
-        width: 89px;
-        height: 40px;
-        border: 1px solid #000;
-        margin: 0 5px;
-        border-radius: 2cap;
-        position: relative;
-    }
-
-    /* Estilos para los botones dentro de los contenedores */
-    .contenedor .boton {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90px;
-        height: 40px;
-        border-radius: 2cap;
-        background-color: greenyellow;
     }
 
     .botones {
         margin-top: 50px;
         margin-right: 200px;
-        display: flex;
         float: right;
         flex-direction: column;
 
@@ -288,24 +307,6 @@ body {
 
     .botones button {
         margin-bottom: 45px;
-        border-radius: 4cap;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        width: 90px;
-        height: 40px;
     }
-
-    /* Estilos para el icono de flecha */
-    #arrow-icon {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-    }
-
 
 }

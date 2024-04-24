@@ -1,107 +1,117 @@
 h1 {
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-    animation: vibrarLogo 1.0s infinite alternate;
-    font-style: normal;
-    color: #1D4989;
-    font-size: 70px;
-    line-height: 1.2;
-  }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-  }
-  
-  .white-container {
-    flex: 3.5;
-    background-color: white;
-    text-align: center;
-    padding: 5vh 7vw;
-  }
-  
-  .orange-container {
-    flex: 5;
-    background-color: #E74424;
-    text-align: center;
-    padding: 5vh 5vw;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .arrow-icon{
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transform: scaleX(-1);
-  }
-
-  .ttl_mod1{
-    margin-top: 70px;
-    color: aliceblue;
-  }
-
-  .parrafo{
-    margin-top: 10px;
-    animation: vibrarLogo 1.0s infinite alternate;
-    font-size: 30px;
-    color: aliceblue;
-  }
-
-  .btn_mod1 {
-    margin-top: 20px;
-    font-size: 30px;
-    border: 10px solid #1D4989;
-    cursor: pointer;
-    color: #1D4989;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Agregar transiciones suaves */
-  }
-
-.btn_mod1:hover {
-    background-color: aliceblue; /* Cambiar el color de fondo al pasar el mouse */
-    border-color: rgba(29, 73, 137, 0.5); /* Cambiar el color del borde al pasar el mouse */
-    transform: scale(1.1); /* Hacer un efecto de zoom en el texto al pasar el mouse */
-    box-shadow: 0 0 20px rgba(29, 73, 137, 0.8); /* Añadir una sombra al borde */
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  animation: vibrarLogo 1.0s infinite alternate;
+  font-style: normal;
+  color: #1D4989;
+  font-size: 70px;
+  line-height: 1.2;
 }
 
-  .logo-img {
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    margin-top: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    animation: vibrarLogo 1.0s infinite alternate;
+}
+
+.white-container {
+  flex: 3.5;
+  background-color: white;
+  text-align: center;
+  padding: 5vh 7vw;
+}
+
+.orange-container {
+  flex: 5;
+  background-color: #E74424;
+  text-align: center;
+  padding: 5vh 5vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.ttl_mod1 {
+  margin-top: 70px;
+  color: aliceblue;
+}
+
+.parrafo {
+  margin-top: 10px;
+  animation: vibrarLogo 1.0s infinite alternate;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.btn_mod1 {
+  margin-top: 20px;
+  font-size: 30px;
+  border: 10px solid #1D4989;
+  cursor: pointer;
+  color: #1D4989;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: brilloBoton 0.5s infinite alternate;
+}
+
+.btn_mod1:hover {
+  background-color: aliceblue;
+  border-color: rgba(29, 73, 137, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(29, 73, 137, 0.8);
+  animation: none;
+}
+@keyframes brilloBoton {
+  0% {
+      filter: brightness(100%);
   }
-  
-  .logo-img:hover {
-    transform: scale(1.1);
+  100% {
+      filter: brightness(150%);
+  }
+}
+.logo-img {
+
+  margin-top: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  animation: vibrarLogo 1.0s infinite alternate;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes vibrarLogo {
+  0% {
+    transform: translateY(-3px);
   }
 
-  @keyframes vibrarLogo {
-    0% {
-      transform: translateY(-3px);
-    }
-  
-    100% {
-      transform: translateY(3px);
-    }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+@media (min-width: 820px) {
+  body {
+    flex-direction: row;
   }
 
-  @media (min-width: 820px) {
-    body {
-      flex-direction: row;
-    }
-  
-    .button-container button {
-      padding: 1.3vw 10vw;
-  
-    }
-  
+  .button-container button {
+    padding: 1.3vw 10vw;
+
   }
+
+}
