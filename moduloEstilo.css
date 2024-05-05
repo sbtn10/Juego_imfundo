@@ -64,7 +64,7 @@ body {
   cursor: pointer;
   color: #1D4989;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  animation: brilloBoton 0.5s infinite alternate;
+  animation: brilloBoton 0.2s infinite alternate;
 }
 
 .btn_mod1:hover {

@@ -29,9 +29,11 @@ function validarRespuesta(contenedor, botonId) {
     if (botonId === botonCorrecto) {
         const audioCorrecto = new Audio('/audio/correcto.mp3');
         audioCorrecto.play();
+        audioCorrecto.volume=0.5;
     } else {
-        const audioCorrecto = new Audio('/audio/incorrecto.mp3');
-        audioCorrecto.play();
+        const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
+        audioIncorrecto.play();
+        audioIncorrecto.volume=0.5;
         const boton = document.getElementById(botonId);
         const contenedorOriginal = document.getElementById('botones-container');
         contenedorOriginal.appendChild(boton);
