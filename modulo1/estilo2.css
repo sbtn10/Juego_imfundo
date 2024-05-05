@@ -1,12 +1,12 @@
 body {
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, #FBF2F2, white, #fbf2f29a);
+    background-color: #FBF2F2;
 }
 
 .container {
     background-image: linear-gradient(to right, #ffbb00, #FD8C00);
-    border-radius: 2pc;
+    border-radius: 0.4pc;
     border: none;
     width: 80%;
     display: flex;
