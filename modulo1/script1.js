@@ -14,7 +14,7 @@ muteIcon.addEventListener('click', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
     const words = document.querySelectorAll('.word');
     const correctMessage = document.getElementById('correct-message');
@@ -82,12 +82,25 @@ document.addEventListener('DOMContentLoaded', function() {
         matchedPairs++;
         correctMessage.style.display = 'block';
         playAudio(audioCorrecto);
-        setTimeout(function() {
+        setTimeout(function () {
             correctMessage.style.display = 'none';
         }, 1000);
 
         if (matchedPairs === totalPairs) {
             completedMessage.style.display = 'block';
+
+        }
+
+        // Verificar si todas las cartas están deshabilitadas
+        const allDisabled = Array.from(cards).every(card => card.classList.contains('destroyed'));
+
+        if (allDisabled) {
+            // Todas las cartas están deshabilitadas, mostrar la flecha
+            const arrowIcon = document.getElementById('arrow-icon');
+            arrowIcon.style.display = 'inline-block'; // Cambia 'inline-block' según el estilo de la flecha en tu CSS
+            arrowIcon.addEventListener('click', function() {
+                window.location.href = 'game2.html';
+            });
         }
     }
 
@@ -102,18 +115,18 @@ document.addEventListener('DOMContentLoaded', function() {
         attempts++;
         errorMessage.style.display = 'block';
         playAudio(audioIncorrecto);
-        setTimeout(function() {
+        setTimeout(function () {
             errorMessage.style.display = 'none';
         }, 1000);
-    
+
         // Reducir el número de vidas y animar la desaparición de un corazón
         lives--;
         if (lives >= 0) {
             animateHeartDisappearance(hearts[lives]); // Animar la desaparición del corazón correspondiente
         }
-    
+
         if (attempts === maxAttempts) {
-            setTimeout(function() {
+            setTimeout(function () {
                 mostrarGameOver();
             }, 500);
         }
@@ -121,24 +134,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function mostrarGameOver() {
         modalGameOver.style.display = 'block';
-    
+
         const reintentarBtn = document.getElementById('reintentarBtn');
         const salirBtn = document.getElementById('salirBtn');
-    
+
         reintentarBtn.addEventListener('click', function () {
             modalGameOver.style.display = 'none';
             window.location.href = 'game1.html'
         });
-    
+
         salirBtn.addEventListener('click', function () {
             modalGameOver.style.display = 'none';
             window.location.href = '../index.html'
         });
-    
+
         audioGameOver.volume = 0.5;
         audioGameOver.play();
     }
-    
+
     function animateHeartDisappearance(heart) {
         heart.style.transition = 'opacity 0.5s ease-out'; // Agrega una transición para el efecto de desvanecimiento
         heart.style.opacity = '0'; // Reduce gradualmente la opacidad del corazón hasta que desaparezca
