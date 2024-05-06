@@ -187,7 +187,23 @@ flex-wrap: wrap;
     transform: scale(1.1); /* Agranda un poco la imagen */
 }
 .destroyed {
-    animation: destroyAnimation 0.5s ease forwards;
+    opacity: 0.5; /* Reducir la opacidad */
+    filter: grayscale(100%); /* Convertir la imagen en escala de grises */
+    pointer-events: none; /* Desactivar los eventos del mouse */
+    cursor: default; /* Cambiar el cursor a predeterminado */
+    /* También puedes añadir otras propiedades de estilo según sea necesario */
+}
+.action-text {
+    position: absolute;
+    bottom: 5px; /* Ajusta la posición del texto */
+    left: 50%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    display: none; /* Oculta el texto inicialmente */
+}
+
+.card.destroyed .action-text {
+    display: block; /* Muestra el texto cuando la carta está destruida */
+    color: white; /* Cambia el color del texto */
 }
 
 @keyframes destroyAnimation {

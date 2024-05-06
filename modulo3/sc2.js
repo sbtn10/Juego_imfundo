@@ -93,13 +93,13 @@ function obtenerBotonCorrecto(contenedorId) {
         case 'contenedor1':
             return 'boton3';
         case 'contenedor2':
-            return 'boton5';
-        case 'contenedor3':
-            return 'boton1';
-        case 'contenedor4':
-            return 'boton4';
-        case 'contenedor5':
             return 'boton2';
+        case 'contenedor3':
+            return 'boton5';
+        case 'contenedor4':
+            return 'boton1';
+        case 'contenedor5':
+            return 'boton4';
         default:
             return null;
     }
