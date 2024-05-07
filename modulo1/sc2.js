@@ -61,7 +61,7 @@ function validarRespuesta(contenedor, botonId) {
 
         // Agregar el evento clic a la flecha para redireccionar
         arrowIcon.addEventListener('click', function () {
-            window.location.href = 'final.html';
+            window.location.href = '../final.html';
         });
     }
 }

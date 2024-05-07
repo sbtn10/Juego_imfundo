@@ -1,0 +1,383 @@
+body {
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FBF2F2;
+}
+
+.container {
+    background-image: linear-gradient(to right, #121435, #121435);
+    border-radius: 0.4pc;
+    border: none;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 0 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    animation: vibrarLogo 1s infinite alternate;
+}
+
+.texto {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1cap;
+    width: 30%;
+    height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(228, 242, 253);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.imagendato{
+display: none;
+}
+
+.info p {
+    display: none;
+}
+
+.oraciones {
+    margin-top: 40px;
+    margin-left: 18%;
+}
+
+.oraciones p {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+/* Estilos para los contenedores vacíos */
+.contenedor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 89px;
+    height: 40px;
+    border: 1px solid #000;
+    margin: 0 5px;
+    border-radius: 2cap;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 0px 3px;
+}
+
+
+/* Estilos para los botones dentro de los contenedores */
+.contenedor .boton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 40px;
+    border-radius: 2cap;
+    background-color: #cdf68f;
+    font-size: 18px;
+}
+
+.botones {
+    margin-top: 80px;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.botones button {
+    margin-bottom: 15px;
+    border-radius: 4cap;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    margin-right: 15px;
+    box-shadow: 0px 0px 10px rgba(6, 101, 202, 0.5);
+    background-color: rgb(211, 229, 245);
+}
+
+.botones button:hover {
+    background-color: rgb(81, 157, 224);
+    color: white;
+}
+
+/*************************/
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-content {
+    background-image: url('/imagen/fondoderrota.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    height: 200px;
+    color: white;
+    border-radius: 3cap;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.5);
+}
+
+.modal-buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.modal-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+    border: 2px solid #000;
+    background-color: #f00;
+    border-radius: 1cap;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+
+.modal-buttons button:hover {
+    background-color: #ff0;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+@keyframes corazonRoto {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.corazon-roto {
+    animation: corazonRoto 1s ease forwards;
+}
+
+/* Estilos para el icono de flecha */
+#arrow-icon {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Animación para mover la flecha de izquierda a derecha */
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Aplicar la animación a la flecha */
+#arrow-icon {
+    animation: moveArrow 2s ease infinite;
+}
+
+/* Estilos para el icono Mute */
+#mute-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+}
+
+/* Estilos cuando se pasa el cursor sobre el icono */
+#mute-icon:hover {
+    fill: #655d5d;
+}
+
+
+@keyframes vibrarLogo {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+@media screen and (max-width: 1309px) and (min-width: 935px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        max-width: 1289px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .texto {
+        font-size: 18px;
+    }
+
+    .imagendato {
+        display:none;
+    }
+    
+    .info {
+        margin-left: auto;
+        width: 200px;
+        height: 50px;
+        justify-content: center;
+    }
+
+    .info p {
+        margin-left: 10px;
+        margin-right: 10px;
+        display: block;
+    }
+
+    .info svg {
+        margin-left: 5px;
+    }
+
+    .oraciones {
+        margin-left: 10%;
+        float: left;
+    }
+
+    .oraciones p {
+        font-size: 25px;
+    }
+
+    .botones {
+        margin-top: 50px;
+        flex-direction: column;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .botones button {
+        margin-bottom: 45px;
+        margin-right: 15px;
+    }
+
+    .img {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 1310px) {
+    
+
+    body {
+        margin: 0;
+    }
+
+    .container {
+        max-width: 1289px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .texto {
+        font-size: 18px;
+    }
+
+    .imagendato {
+        display:flex;
+        position: absolute;
+        width: 300px;
+        height: auto;
+        margin-left: 75%;
+        margin-top: 8%;
+    }
+    
+    .info {
+        margin-left: auto;
+        width: 200px;
+        height: 50px;
+        justify-content: center;
+    }
+
+    .info p {
+        margin-left: 10px;
+        margin-right: 10px;
+        display: block;
+    }
+
+    .info svg {
+        margin-left: 5px;
+    }
+
+    .oraciones {
+        margin-left: 10%;
+        float: left;
+    }
+
+    .oraciones p {
+        font-size: 25px;
+    }
+
+    .botones {
+        margin-top: 50px;
+        margin-right: 200px;
+        float: right;
+        flex-direction: column;
+
+    }
+
+    .botones button {
+        margin-bottom: 45px;
+    }
+
+    .img {
+        margin-top: 15px;
+    }
+    
+}

@@ -91,15 +91,15 @@ function mostrarGameOver() {
 function obtenerBotonCorrecto(contenedorId) {
     switch (contenedorId) {
         case 'contenedor1':
-            return 'boton3';
+            return 'boton4';
         case 'contenedor2':
-            return 'boton2';
-        case 'contenedor3':
             return 'boton5';
+        case 'contenedor3':
+            return 'boton2';
         case 'contenedor4':
             return 'boton1';
         case 'contenedor5':
-            return 'boton4';
+            return 'boton3';
         default:
             return null;
     }

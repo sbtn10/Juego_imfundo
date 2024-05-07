@@ -61,7 +61,7 @@ function validarRespuesta(contenedor, botonId) {
 
         // Agregar el evento clic a la flecha para redireccionar
         arrowIcon.addEventListener('click', function () {
-            window.location.href = '../final.html';
+            window.location.href = 'game2.html';
         });
     }
 }
@@ -74,7 +74,7 @@ function mostrarGameOver() {
 
     reintentarBtn.addEventListener('click', function () {
         modalGameOver.style.display = 'none';
-        window.location.href = 'game2.html'
+        window.location.href = '4game1.html'
     });
 
     salirBtn.addEventListener('click', function () {
@@ -93,13 +93,13 @@ function obtenerBotonCorrecto(contenedorId) {
         case 'contenedor1':
             return 'boton3';
         case 'contenedor2':
-            return 'boton2';
-        case 'contenedor3':
-            return 'boton5';
-        case 'contenedor4':
-            return 'boton1';
-        case 'contenedor5':
             return 'boton4';
+        case 'contenedor3':
+            return 'boton1';
+        case 'contenedor4':
+            return 'boton2';
+        case 'contenedor5':
+            return 'boton5';
         default:
             return null;
     }
