@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto 1</title>
-    <link rel="stylesheet" href="4estilo1.css">
+    <title>Reto 2</title>
+    <link rel="stylesheet" href="estilo2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
 
     <div class="container">
-        <p class="texto">¡Reto 1: Completa las oraciones con la preposición adecuada según la imagen mostrada!!</p>
+        <p class="texto">¡Reto 2: Completa con la forma usted del imperativo. !</p>
         <div class="info">
             <p style="color: #E74423;">Vidas</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#E74423" width="24px" height="24px">
@@ -39,35 +39,37 @@
     </div>
 
     <div class="oraciones">
-        <p>1. El gato esta <span class="contenedor" id="contenedor1" ondrop="drop(event)"
-                ondragover="allowDrop(event)"></span> en la cama.</p>
-        <p>2. La silla esta <span class="contenedor" id="contenedor2" ondrop="drop(event)" ondragover="allowDrop(event)"></span> de
-            la mesa.</p>
-        <p>3. La maceta esta <span class="contenedor" id="contenedor3" ondrop="drop(event)"
-                ondragover="allowDrop(event)"></span> de la computadora.</p>
-        <p>4. Los parlantes estan <span class="contenedor" id="contenedor4" ondrop="drop(event)" ondragover="allowDrop(event)"></span> de
-            la pantalla.</p>
-        <p>5. El teclado esta <span class="contenedor" id="contenedor5" ondrop="drop(event)"
-                ondragover="allowDrop(event)"></span> del escritorio.</p>
+        <p>1. Por favor, <span class="contenedor" id="contenedor1" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span><em>(bajar)</em> el volumen a la televisión</p>
+        <p>2. Señorita, <span class="contenedor" id="contenedor2" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span><em>(decir)</em>
+            dónde puedo recargar mi teléfono.</p>
+        <p>3. Mozo, <span class="contenedor" id="contenedor3" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span><em>(traer)</em> unemparedado, por favor.</p>
+        <p>4. A ver señor, <span class="contenedor" id="contenedor4" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span><em>(abrir)</em> la boca y
+            <span class="contenedor" id="contenedor5" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span><em>(sacar)</em> la lengua.
+        </p>
+        <p>5. Señor, <span class="contenedor" id="contenedor6" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span><em>(escribir)</em> su nombre completo y <span class="contenedor"
+                id="contenedor7" ondrop="drop(event)" ondragover="allowDrop(event)"></span><em>(firmar)</em> aquí.</p>
+        <p>6. Señora Torres, <span class="contenedor" id="contenedor8" ondrop="drop(event)"
+                ondragover="allowDrop(event)"></span><em>(venir)</em> por aquí. <span class="contenedor"
+                id="contenedor9" ondrop="drop(event)" ondragover="allowDrop(event)"></span><em>(tomar)</em> asiento.</p>
     </div>
 
-    <div>
-        <img src="../imagen/4modulogame1.png" alt="dato1" class="imagendato">
-    </div> 
-    
     <div class="botones" id="botones-container">
-        <button class="boton" id="boton1" draggable="true" ondragstart="drag(event)" data-posicion="1">arriba</button>
-        <button class="boton" id="boton2" draggable="true" ondragstart="drag(event)" data-posicion="2">abajo</button>
-        <button class="boton" id="boton3" draggable="true" ondragstart="drag(event)" data-posicion="3">sobre</button>
-        <button class="boton" id="boton4" draggable="true" ondragstart="drag(event)" data-posicion="4">enfrente</button>
-        <button class="boton" id="boton5" draggable="true" ondragstart="drag(event)" data-posicion="5">entre</button>
+        <button class="boton" id="boton1" draggable="true" ondragstart="drag(event)" data-posicion="1">escriba</button>
+        <button class="boton" id="boton2" draggable="true" ondragstart="drag(event)" data-posicion="2">saque</button>
+        <button class="boton" id="boton3" draggable="true" ondragstart="drag(event)" data-posicion="3">firme</button>
+        <button class="boton" id="boton4" draggable="true" ondragstart="drag(event)" data-posicion="4">tráigame</button>
+        <button class="boton" id="boton5" draggable="true" ondragstart="drag(event)" data-posicion="5">dígame</button>
+        <button class="boton" id="boton6" draggable="true" ondragstart="drag(event)" data-posicion="6">Tome</button>
+        <button class="boton" id="boton7" draggable="true" ondragstart="drag(event)" data-posicion="7">baje</button>
+        <button class="boton" id="boton8" draggable="true" ondragstart="drag(event)" data-posicion="8">venga</button>
+        <button class="boton" id="boton9" draggable="true" ondragstart="drag(event)" data-posicion="9">abra</button>
     </div>
-
-    <!-- 
-    <div class="imagenejemplo">
-        <img src="../imagen/4modulogame1.png" alt="dato1" class="imagendato">
-    </div> 
-    -->
 
     <!-- Modal -->
     <div id="gameOverModal" class="modal">
@@ -96,7 +98,7 @@
         0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
     </svg>
 
-    <script src="4sc1.js"></script>
+    <script src="sc2.js"></script>
 </body>
 
 </html>
