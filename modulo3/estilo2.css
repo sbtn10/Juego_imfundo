@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    background-image: linear-gradient(to right, #ffbb00, #FD8C00);
+    background-image: linear-gradient(to right, #121435, #121435);
     border-radius: 0.4pc;
     border: none;
     width: 80%;
@@ -22,7 +22,7 @@ body {
 .texto {
     font-size: 15px;
     font-weight: bold;
-    color: #000;
+    color: #fff;
 }
 
 
