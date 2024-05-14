@@ -130,19 +130,26 @@ muteIcon.addEventListener('click', () => {
     }
 });
 
+// Obtener el modal y el botón para abrirlo
+const modal = document.getElementById('miModal');
+const iconoAyuda = document.getElementById('abrirModal');
 
-// Obtener el botón y el modal
-var openModalBtn = document.getElementById('openModalBtn');
-var modal = document.getElementById('myModal');
+// Obtener el botón para cerrar el modal
+const btnCerrarModal = document.getElementsByClassName('cerrar')[0];
 
-// Función para abrir el modal
-openModalBtn.addEventListener('click', function () {
-    modal.style.display = 'block';
+// Función para abrir el modal al hacer clic en el icono de ayuda
+iconoAyuda.addEventListener('click', () => {
+  modal.style.display = 'block';
 });
 
-// Función para cerrar el modal al hacer clic fuera de él
-window.addEventListener('click', function (event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
+// Función para cerrar el modal al hacer clic en el botón de cerrar
+btnCerrarModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Función para cerrar el modal si se hace clic fuera de él
+window.addEventListener('click', (evento) => {
+  if (evento.target === modal) {
+    modal.style.display = 'none';
+  }
 });

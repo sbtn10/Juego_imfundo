@@ -177,8 +177,83 @@ body {
     color: #000;
     transform: scale(1.1);
 }
+/* Estilos del modal */
+.modaldato {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    /* Fondo semi-transparente */
+}
 
+/* Estilos del modal centrado */
+.modal-contenido {
+    background: linear-gradient(to bottom, #ADD8E6, #4169E1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    overflow-y: auto;
+    /* Habilitar scroll vertical si el contenido es demasiado largo */
+}
 
+.cerrar-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.cerrar {
+    color: #FFF;
+    /* Texto blanco */
+    font-size: 24px;
+}
+
+.lado {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    position: relative;
+}
+
+.derecha {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.linea {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Posiciona la línea en el centro horizontal */
+    width: 2px; /* Grosor de la línea */
+    background-color: black; /* Color de la línea */
+    z-index: -1; /* Coloca la línea detrás del contenido */
+}
+.llave {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 1px); /* Posiciona la parte de la llave a la derecha de la línea */
+    transform: translateY(-50%); /* Centra verticalmente la parte de la llave */
+    width: 20px; /* Ancho de la parte de la llave */
+    height: 20px; /* Altura de la parte de la llave */
+    background-color: black; /* Color de la llave */
+    clip-path: polygon(0 0, 100% 50%, 0 100%); /* Forma de la llave */
+}
 @keyframes corazonRoto {
     0% {
         transform: scale(1);
