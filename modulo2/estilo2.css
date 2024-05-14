@@ -27,23 +27,31 @@ body {
 
 
 .info {
-    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1cap;
-    width: 30%;
-    height: 40px;
+    width: 120px;
+    height: 30px;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: rgb(228, 242, 253);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #FFFFFF;
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
-.imagendato{
-display: none;
+
+.imagendato {
+    display: none;
 }
 
 .info p {
     display: none;
+}
+
+.info svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 .oraciones {
@@ -265,23 +273,31 @@ display: none;
     }
 
     .imagendato {
-        display:none;
+        display: none;
     }
-    
+
     .info {
         margin-left: auto;
-        width: 200px;
-        height: 50px;
-        justify-content: center;
+        padding: 7px;
+        width: 120px;
+        height: 20px;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        display: flex;
+        background-color: #FFFFFF;
+        border-radius: 10px;
     }
 
     .info p {
-        margin-left: 10px;
-        margin-right: 10px;
-        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        display: flex;
     }
 
     .info svg {
+        width: 20px;
+        height: 20px;
         margin-left: 5px;
     }
 
@@ -312,7 +328,7 @@ display: none;
 }
 
 @media (min-width: 1310px) {
-    
+
 
     body {
         margin: 0;
@@ -330,28 +346,36 @@ display: none;
     }
 
     .imagendato {
-        display:flex;
+        display: flex;
         position: absolute;
-        width: 300px;
+        width: 200px;
         height: auto;
-        margin-left: 75%;
+        margin-left: 80%;
         margin-top: 8%;
     }
-    
+
     .info {
         margin-left: auto;
-        width: 200px;
-        height: 50px;
-        justify-content: center;
+        padding: 7px;
+        width: 120px;
+        height: 20px;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        display: flex;
+        background-color: #FFFFFF;
+        border-radius: 10px;
     }
 
     .info p {
-        margin-left: 10px;
-        margin-right: 10px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
         display: block;
     }
 
     .info svg {
+        width: 20px;
+        height: 20px;
         margin-left: 5px;
     }
 
@@ -366,7 +390,7 @@ display: none;
 
     .botones {
         margin-top: 50px;
-        margin-right: 500px;
+        margin-right: 400px;
         float: right;
         flex-direction: column;
 
@@ -379,5 +403,5 @@ display: none;
     .img {
         margin-top: 15px;
     }
-    
+
 }
