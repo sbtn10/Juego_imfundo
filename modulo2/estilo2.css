@@ -64,6 +64,24 @@ body {
     font-size: 20px;
 }
 
+.selected {
+    transform: scale(1.1);
+    border-color: rgb(153, 255, 0);
+    color: black !important;
+    background-color: rgb(210, 241, 197) !important;
+}
+
+.destroyed {
+    opacity: 0.5;
+    /* Reducir la opacidad */
+    filter: grayscale(100%);
+    pointer-events: none;
+    /* Desactivar los eventos del mouse */
+    cursor: default;
+    /* Cambiar el cursor a predeterminado */
+}
+
+
 /* Estilos para los contenedores vacíos */
 .contenedor {
     display: inline-block;
@@ -76,6 +94,8 @@ body {
     position: relative;
     background-color: white;
     box-shadow: 0px 0px 3px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 
@@ -88,7 +108,6 @@ body {
     width: 90px;
     height: 40px;
     border-radius: 2cap;
-    background-color: #cdf68f;
     font-size: 18px;
 }
 
@@ -188,8 +207,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     /* Fondo semi-transparente */
 }
 
@@ -216,7 +235,8 @@ body {
     margin-top: 20px;
 }
 
-.tabla-verbo th, .tabla-verbo td {
+.tabla-verbo th,
+.tabla-verbo td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
@@ -277,6 +297,7 @@ ul li {
     color: #FFF;
     /* Texto blanco */
 }
+
 @keyframes corazonRoto {
     0% {
         transform: scale(1);
@@ -450,6 +471,7 @@ ul li {
         height: auto;
         margin-left: 80%;
         margin-top: 8%;
+        animation: zoomAnimacion 5s infinite alternate;
     }
 
     .info {
@@ -502,4 +524,24 @@ ul li {
         margin-top: 15px;
     }
 
+
+
+}
+
+@keyframes zoomAnimacion {
+    0% {
+        transform: scale(1);
+    }
+
+    /* Estado inicial, sin zoom */
+    50% {
+        transform: scale(1.2);
+    }
+
+    /* Zoom al 120% a la mitad de la animación */
+    100% {
+        transform: scale(1);
+    }
+
+    /* Regresar al tamaño original al final de la animación */
 }

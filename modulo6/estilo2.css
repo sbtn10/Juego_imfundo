@@ -64,6 +64,23 @@ body {
     font-size: 20px;
 }
 
+.selected {
+    transform: scale(1.1);
+    border-color: rgb(153, 255, 0);
+    color: black !important;
+    background-color: rgb(210, 241, 197) !important;
+}
+
+.destroyed {
+    opacity: 0.5;
+    /* Reducir la opacidad */
+    filter: grayscale(100%);
+    pointer-events: none;
+    /* Desactivar los eventos del mouse */
+    cursor: default;
+    /* Cambiar el cursor a predeterminado */
+}
+
 /* Estilos para los contenedores vacíos */
 .contenedor {
     display: inline-block;
@@ -214,16 +231,17 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #ddd;
 }
 
 .tabla-verbo th, .tabla-verbo td {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 8px;
     text-align: center;
 }
 
 .tabla-verbo tr:hover {
-    background-color: #ddd;
+    background-color: #9b9595;
 }
 
 .cerrar-container {
