@@ -1,129 +1,112 @@
-
-
-
-let posicionOriginal = null;
-let corazonesRestantes = 3;
-
-function allowDrop(event) {
-    event.preventDefault();
-}
-
-function drag(event) {
-    const boton = event.target;
-    posicionOriginal = boton.dataset.posicion;
-    event.dataTransfer.setData('text', boton.id);
-}
-
-function drop(event) {
-    event.preventDefault();
-    const data = event.dataTransfer.getData('text');
-    const draggableElement = document.getElementById(data);
-    const dropzone = event.target;
-
-    if (dropzone.classList.contains('contenedor')) {
-        dropzone.appendChild(draggableElement);
-        validarRespuesta(dropzone, data);
-    }
-}
-function validarRespuesta(contenedor, botonId) {
-    const contenedorId = contenedor.id;
-    const botonCorrecto = obtenerBotonCorrecto(contenedorId);
-
-    if (botonId === botonCorrecto) {
-        const audioCorrecto = new Audio('/audio/correcto.mp3');
-        audioCorrecto.play();
-        audioCorrecto.volume=0.5;
-    } else {
-        const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
-        audioIncorrecto.play();
-        audioIncorrecto.volume=0.5;
-        const boton = document.getElementById(botonId);
-        const contenedorOriginal = document.getElementById('botones-container');
-        contenedorOriginal.appendChild(boton);
-        boton.dataset.posicion = posicionOriginal;
-        const contenedorCorazones = document.querySelector('.info');
-        const corazones = contenedorCorazones.querySelectorAll('svg');
-
-        if (corazonesRestantes > 0) {
-            corazones[corazonesRestantes - 1].classList.add('corazon-roto');
-            corazonesRestantes--;
-        }
-
-        // Verificar si se acabaron los corazones
-        if (corazonesRestantes === 0) {
-            mostrarGameOver();
-        }
-    }
-
-    // Verificar si todos los botones están en el contenedor correcto
-    const botonesCorrectos = Array.from(document.querySelectorAll('.contenedor')).every(contenedor => contenedor.children.length > 0);
-    if (botonesCorrectos) {
-
-        const arrowIcon = document.getElementById('arrow-icon');
-        arrowIcon.style.display = 'block';
-
-        // Agregar el evento clic a la flecha para redireccionar
-        arrowIcon.addEventListener('click', function () {
-            window.location.href = '../final.html';
-        });
-    }
-}
-function mostrarGameOver() {
-    const modalGameOver = document.getElementById('gameOverModal');
-    modalGameOver.style.display = 'block';
-
-    const reintentarBtn = document.getElementById('reintentarBtn');
-    const salirBtn = document.getElementById('salirBtn');
-
-    reintentarBtn.addEventListener('click', function () {
-        modalGameOver.style.display = 'none';
-        window.location.href = 'game2.html'
-    });
-
-    salirBtn.addEventListener('click', function () {
-        modalGameOver.style.display = 'none';
-        window.location.href = '../index.html'
-    });
-
-    audio.volume = 0.0;
-
-    const gameOver = new Audio('/audio/gameover.mp3');
-    gameOver.play();
-    gameOver.volume = 0.5;
-}
-function obtenerBotonCorrecto(contenedorId) {
-    switch (contenedorId) {
-        case 'contenedor1':
-            return 'boton3';
-        case 'contenedor2':
-            return 'boton5';
-        case 'contenedor3':
-            return 'boton1';
-        case 'contenedor4':
-            return 'boton4';
-        case 'contenedor5':
-            return 'boton2';
-        default:
-            return null;
-    }
-}
-
-const muteIcon = document.getElementById('mute-icon');
-var audio = document.getElementById('audioElement');
-audio.volume = 0.03;
+const muteIcon = document.querySelector('#mute-icon');
+var audio = document.querySelector('#audioElement');
+audio.volume = 0.3;
 
 let isMuted = false;
 
 muteIcon.addEventListener('click', () => {
-    if (!isMuted) {
-        audio.muted = true; // Silenciar el audio
-        isMuted = true;
-    } else {
-        audio.muted = false; // Activar el audio
-        isMuted = false;
-    }
+    audio.volume = isMuted ? 0.3 : 0;
+    isMuted = !isMuted;
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.boton');
+    const containers = document.querySelectorAll('.contenedor');
+    const flecha = document.querySelector('#arrow-icon');
+    const maxAttempts = 3;
+    let attempts = 0;
+    let selectedButton = null;
+    let correctMatches = 0;
+
+    // Sonidos
+    const audioCorrecto = new Audio('/audio/correcto.mp3');
+    const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
+    const audioGameOver = new Audio('/audio/gameover.mp3');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', selectWord);
+    });
+
+    containers.forEach(container => {
+        container.addEventListener('click', placeWord);
+    });
+    function playSound(sound) {
+        sound.pause(); // Detener el sonido actual antes de reproducirlo nuevamente
+        sound.currentTime = 0; // Reiniciar el tiempo de reproducción al principio
+        sound.play(); // Reproducir el sonido
+    }
+    function selectWord() {
+        if (selectedButton) {
+            selectedButton.classList.remove('selected'); // Elimina la selección del botón anterior
+        }
+
+        selectedButton = this;
+        this.classList.add('selected'); // Aplica la selección al botón actual
+    }
+
+    function placeWord() {
+        if (!selectedButton) return;
+
+        const buttonWord = selectedButton.dataset.word;
+        const containerWord = this.dataset.word;
+
+        if (buttonWord === containerWord) {
+            const buttonClone = selectedButton.cloneNode(true);
+            this.innerHTML = ''; // Elimina cualquier contenido existente en el contenedor
+            this.appendChild(buttonClone); // Agrega el clon del botón al contenedor
+            playSound(audioCorrecto); // Reproduce el sonido antes de realizar las operaciones
+            this.classList.add('correct');
+            selectedButton.classList.add('destroyed');
+            correctMatches++;
+            checkCompletion();
+        } else {
+            playSound(audioIncorrecto); // Reproduce el sonido antes de realizar las operaciones
+            attempts++;
+            updateLives();
+        }
+
+        selectedButton.classList.remove('selected');
+        selectedButton = null;
+    }
+
+
+    function updateLives() {
+        const hearts = document.querySelectorAll('.heart');
+        if (attempts <= maxAttempts) {
+            playSound(audioIncorrecto); // Reproduce el sonido antes de realizar las operaciones
+            animateHeartDisappearance(hearts[attempts - 1]);
+        }
+
+        if (attempts >= maxAttempts) {
+            playSound(audioGameOver); // Reproduce el sonido antes de realizar las operaciones
+            showGameOver();
+        }
+    }
+
+    function checkCompletion() {
+        if (correctMatches === containers.length) {
+            flecha.style.display = 'block'; // Muestra la flecha al completar todo el juego
+            flecha.addEventListener('click', () => {
+                window.location.href = '../final.html'; // Redirige a final.html al hacer clic en la flecha
+            });
+        }
+    }
+
+    function showGameOver() {
+        const gameOverModal = document.querySelector('#gameOverModal');
+        gameOverModal.style.display = 'block';
+        document.querySelector('#reintentarBtn').addEventListener('click', () => location.reload());
+        document.querySelector('#salirBtn').addEventListener('click', () => window.location.href = '../index.html');
+    }
+
+    function animateHeartDisappearance(heart) {
+        heart.style.transition = 'opacity 0.5s ease-out'; // Agrega una transición para el efecto de desvanecimiento
+        heart.style.opacity = '0'; // Reduce gradualmente la opacidad del corazón hasta que desaparezca
+        setTimeout(() => {
+            heart.style.display = 'none'; // Oculta el corazón después de que termine la animación
+        }, 500); // La duración de la transición es de 0.5 segundos
+    }
+});
 
 // Obtener el modal y el botón para abrirlo
 const modal = document.getElementById('miModal');
@@ -148,6 +131,3 @@ window.addEventListener('click', (evento) => {
     modal.style.display = 'none';
   }
 });
-
-
-

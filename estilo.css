@@ -51,6 +51,11 @@ body {
   color: #ffffff;
 }
 
+/* estilo.css */
+.blocked {
+  opacity: 0.5;
+  pointer-events: none; /* Evita que los botones bloqueados sean clicables */
+}
 
 .flecha-img {
   width: 100px;

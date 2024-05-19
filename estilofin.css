@@ -1,6 +1,6 @@
 /* Estilos para el body */
 body {
-    background-color: #E74424;
+    background: linear-gradient(to right, #E74424, #800080);
     width: 80vw;
     max-width: 1200px;
     margin: 0 auto;

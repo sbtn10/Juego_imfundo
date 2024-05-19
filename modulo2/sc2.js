@@ -107,7 +107,7 @@ function obtenerBotonCorrecto(contenedorId) {
 
 const muteIcon = document.getElementById('mute-icon');
 var audio = document.getElementById('audioElement');
-audio.volume = 0.03;
+audio.volume = 0.3;
 
 let isMuted = false;
 

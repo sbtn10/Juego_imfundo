@@ -1,6 +1,6 @@
 const muteIcon = document.getElementById('mute');
 var audio = document.getElementById('audioElement');
-audio.volume = 0.03;
+audio.volume = 0.3;
 
 let isMuted = false;
 
