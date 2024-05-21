@@ -41,7 +41,6 @@ document.getElementById('flecha').addEventListener('click', function() {
         document.getElementById('btn6').textContent = 'MODULO 12';
 
         document.getElementById('flecha').style.transform = 'rotate(180deg)';
-        document.getElementById('btn1').classList.add('blocked');
     } else {
         // Restaurar la apariencia original de los botones y la flecha
         document.getElementById('btn1').textContent = 'MODULO 1';

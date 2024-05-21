@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (correctMatches === containers.length) {
             flecha.style.display = 'block'; // Muestra la flecha al completar todo el juego
             flecha.addEventListener('click', () => {
-                window.location.href = '../final.html'; // Redirige a final.html al hacer clic en la flecha
+                window.location.href = '../final.html'; // Redirige a game3.html al hacer clic en la flecha
             });
         }
     }

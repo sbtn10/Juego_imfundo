@@ -17,8 +17,7 @@
 </head>
 
 <body>
-    <img src="/imagen/joven.gif" alt="dato1" style="float: left; margin-top: 15%; margin-left: -10%; height: 200px; width: 200px;">
-    <img src="/imagen/joven.gif" alt="dato1" style="float: right; margin-top: 15%; margin-right: -10%; height: 200px; width: 200px;">
+    <img src="/imagen/confeti.gif" id="confeti" alt="dat">
     <div class="container desplazamiento-arriba">
         <div class="icon-container">
             <a href="/index.html" style="text-decoration: none;">
@@ -63,9 +62,10 @@
                     setTimeout(function () {
                         estrellas[i].style.opacity = "1";
                         mostrarEstrella(i + 1);
-                    }, 1000);
+                    }, 500);
                 } else {
 
+                    document.getElementById('confeti').style.display = 'block'; // Muestra el confeti
                     setTimeout(() => {
                         for (let i = 0; i < 200; i++) {
                             setTimeout(() => {
@@ -74,18 +74,6 @@
                         }
                     }, 500);
                 }
-            }
-
-            function crearConfeti() {
-                const confeti = document.createElement('div');
-                confeti.classList.add('confeti');
-                confeti.style.left = Math.random() * (window.innerWidth - 10) + 'px';
-                confeti.style.top = Math.random() * (window.innerHeight - 10) + 'px';
-                document.body.appendChild(confeti);
-
-                confeti.addEventListener('animationend', () => {
-                    confeti.remove();
-                });
             }
 
             mostrarEstrella(0);
