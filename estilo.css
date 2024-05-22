@@ -28,7 +28,6 @@ body {
   margin-top: 5vh;
   text-align: center;
 }
-
 .button-container button {
   margin-bottom: 15px;
   display: block;
@@ -142,6 +141,15 @@ h1 {
   }
 }
 
+.locked {
+  background-color: #ddd;
+  pointer-events: none;
+}
+
+.unlocked {
+  color: white;
+}
+
 @media (min-width: 820px) {
   body {
     flex-direction: row;
@@ -167,7 +175,7 @@ h1 {
     font-size: 1.3vw;
 
   }
-
+  
   h1 {
     font-family: "Inter", sans-serif;
     font-weight: bold;
