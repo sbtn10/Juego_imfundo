@@ -1,3 +1,5 @@
+CSS------
+
 body {
     padding: 0;
     font-family: Arial, sans-serif;
@@ -5,7 +7,7 @@ body {
 }
 
 .container {
-    background-image: linear-gradient(to right, #121435, #121435);
+    background-image: linear-gradient(to right, #5f66e2, #414478);
     border-radius: 0.4pc;
     border: none;
     width: 80%;
@@ -22,29 +24,36 @@ body {
 .texto {
     font-size: 15px;
     font-weight: bold;
-    color: #ffffff;;
-    
+    color: #fff;
 }
 
 
 .info {
-    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1cap;
-    width: 30%;
-    height: 40px;
+    width: 120px;
+    height: 30px;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: rgb(228, 242, 253);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #FFFFFF;
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
-.imagendato{
-display: none;
+
+.imagendato {
+    display: none;
 }
 
 .info p {
     display: none;
+}
+
+.info svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 .oraciones {
@@ -55,6 +64,35 @@ display: none;
 .oraciones p {
     margin-bottom: 40px;
     font-size: 20px;
+}
+
+.selected {
+    transform: scale(1.1);
+    border-color: rgb(153, 255, 0);
+    color: black !important;
+    background-color: rgb(210, 241, 197) !important;
+}
+
+.destroyed {
+    opacity: 0.5;
+    /* Reducir la opacidad */
+    filter: grayscale(100%);
+    pointer-events: none;
+    /* Desactivar los eventos del mouse */
+    cursor: default;
+    /* Cambiar el cursor a predeterminado */
+}
+
+.messages {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: none;
+    font-size: 24px;
+    color: white;
+    text-align: center;
 }
 
 /* Estilos para los contenedores vacíos */
@@ -69,6 +107,8 @@ display: none;
     position: relative;
     background-color: white;
     box-shadow: 0px 0px 3px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 
@@ -171,6 +211,106 @@ display: none;
     transform: scale(1.1);
 }
 
+/* Estilos del modal */
+.modaldato {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fondo semi-transparente */
+}
+
+/* Estilos del modal centrado */
+.modal-contenido {
+    background: linear-gradient(to bottom, #ADD8E6, #4169E1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    overflow-y: auto;
+    /* Habilitar scroll vertical si el contenido es demasiado largo */
+}
+
+.tabla-verbo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-verbo th,
+.tabla-verbo td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-verbo tr:hover {
+    background-color: #ddd;
+}
+
+.cerrar-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.cerrar {
+    color: #FFF;
+    /* Texto blanco */
+    font-size: 24px;
+}
+
+.titulo-modal h2 {
+    color: #FFF;
+    /* Texto blanco */
+    font-family: 'Comic Sans MS', cursive;
+    margin-bottom: 10px;
+}
+
+.definicion p {
+    color: #FFF;
+    /* Texto blanco */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.ejemplos h3 {
+    color: #FFF;
+    /* Texto blanco */
+    font-family: 'Comic Sans MS', cursive;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #FFF;
+    /* Texto blanco */
+}
+
+.modalp {
+    font-size: 16px;
+    color: #FFF;
+    /* Texto blanco */
+}
 
 @keyframes corazonRoto {
     0% {
@@ -249,7 +389,7 @@ display: none;
     }
 }
 
-@media screen and (max-width: 1230px) and (min-width: 1100px) {
+@media screen and (max-width: 1369px) and (min-width: 1160px) {
     body {
         margin: 0;
     }
@@ -266,23 +406,31 @@ display: none;
     }
 
     .imagendato {
-        display:none;
+        display: none;
     }
-    
+
     .info {
         margin-left: auto;
-        width: 200px;
-        height: 50px;
-        justify-content: center;
+        padding: 7px;
+        width: 120px;
+        height: 20px;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        display: flex;
+        background-color: #FFFFFF;
+        border-radius: 10px;
     }
 
     .info p {
-        margin-left: 10px;
-        margin-right: 10px;
-        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        display: flex;
     }
 
     .info svg {
+        width: 20px;
+        height: 20px;
         margin-left: 5px;
     }
 
@@ -299,7 +447,7 @@ display: none;
         margin-top: 50px;
         flex-direction: column;
         float: right;
-        margin-right: 10%;
+        margin-right: 20%;
     }
 
     .botones button {
@@ -312,8 +460,8 @@ display: none;
     }
 }
 
-@media (min-width: 1231px) {
-    
+@media (min-width: 1369px) {
+
 
     body {
         margin: 0;
@@ -331,28 +479,37 @@ display: none;
     }
 
     .imagendato {
-        display:flex;
+        display: flex;
         position: absolute;
-        width: 300px;
+        width: 200px;
         height: auto;
-        margin-left: 75%;
+        margin-left: 80%;
         margin-top: 8%;
+        animation: zoomAnimacion 5s infinite alternate;
     }
-    
+
     .info {
         margin-left: auto;
-        width: 200px;
-        height: 50px;
-        justify-content: center;
+        padding: 7px;
+        width: 120px;
+        height: 20px;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        display: flex;
+        background-color: #FFFFFF;
+        border-radius: 10px;
     }
 
     .info p {
-        margin-left: 10px;
-        margin-right: 10px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
         display: block;
     }
 
     .info svg {
+        width: 20px;
+        height: 20px;
         margin-left: 5px;
     }
 
@@ -367,7 +524,7 @@ display: none;
 
     .botones {
         margin-top: 50px;
-        margin-right: 200px;
+        margin-right: 400px;
         float: right;
         flex-direction: column;
 
@@ -377,5 +534,28 @@ display: none;
         margin-bottom: 45px;
     }
 
-    
+    .img {
+        margin-top: 15px;
+    }
+
+
+
+}
+
+@keyframes zoomAnimacion {
+    0% {
+        transform: scale(1);
+    }
+
+    /* Estado inicial, sin zoom */
+    50% {
+        transform: scale(1.2);
+    }
+
+    /* Zoom al 120% a la mitad de la animación */
+    100% {
+        transform: scale(1);
+    }
+
+    /* Regresar al tamaño original al final de la animación */
 }
