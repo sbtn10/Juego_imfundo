@@ -5,7 +5,7 @@ audio.volume = 0.3;
 let isMuted = false;
 
 muteIcon.addEventListener('click', () => {
-    audio.volume = isMuted ? 0.3 : 0;
+    audio.volume = isMuted ? 0.03 : 0;
     isMuted = !isMuted;
 });
 

@@ -62,6 +62,19 @@
 
   <!-- Script -->
   <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Recuperar el progreso del usuario de localStorage
+        let currentModule = parseInt(localStorage.getItem('currentModule')) || 1;
+
+        // Desbloquear los módulos según el progreso
+        for (let i = 1; i <= currentModule; i++) {
+            document.getElementById('btn' + i).classList.remove('locked');
+            document.getElementById('btn' + i).classList.add('unlocked');
+        }
+    });
+</script>
+
 </body>
 
 </html>

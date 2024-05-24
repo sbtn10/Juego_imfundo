@@ -1,12 +1,12 @@
 
 const muteIcon = document.querySelector('#mute-icon');
 var audio = document.querySelector('#audioElement');
-audio.volume = 0.3;
+audio.volume = 0.03;
 
 let isMuted = false;
 
 muteIcon.addEventListener('click', () => {
-    audio.volume = isMuted ? 0.3 : 0;
+    audio.volume = isMuted ? 0.03 : 0;
     isMuted = !isMuted;
 });
 

@@ -13,6 +13,10 @@ body {
   padding: 10vh 10vw;
 }
 
+.locked::before {
+  content: url('/imagen/candado.png');
+}
+
 .orange-container {
   flex: 5;
   background-color: #E74424;
