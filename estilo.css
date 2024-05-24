@@ -14,7 +14,7 @@ body {
 }
 
 .locked::before {
-  content: url('/imagen/candado.png');
+  content: url('./imagen/candado.png');
 }
 
 .orange-container {
