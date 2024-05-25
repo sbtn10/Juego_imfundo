@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let correctMatches = 0;
 
     // Sonidos
-    const audioCorrecto = new Audio('/audio/correcto.mp3');
-    const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
-    const audioGameOver = new Audio('/audio/gameover.mp3');
+    const audioCorrecto = new Audio('../audio/correcto.mp3');
+    const audioIncorrecto = new Audio('../audio/incorrecto.mp3');
+    const audioGameOver = new Audio('../audio/gameover.mp3');
 
     buttons.forEach(button => {
         button.addEventListener('click', selectWord);

@@ -30,7 +30,7 @@ function validarRespuesta(contenedor, botonId) {
     if (Array.isArray(botonCorrecto)) {
         // Si hay múltiples opciones correctas, verifica si el botón arrastrado coincide con alguna de ellas
         if (botonCorrecto.includes(botonId)) {
-            const audioCorrecto = new Audio('/audio/correcto.mp3');
+            const audioCorrecto = new Audio('../audio/correcto.mp3');
             audioCorrecto.play();
             audioCorrecto.volume = 0.5;
         } else {
@@ -40,7 +40,7 @@ function validarRespuesta(contenedor, botonId) {
     } else {
         // Si solo hay una opción correcta, compara directamente
         if (botonId === botonCorrecto) {
-            const audioCorrecto = new Audio('/audio/correcto.mp3');
+            const audioCorrecto = new Audio('../audio/correcto.mp3');
             audioCorrecto.play();
             audioCorrecto.volume = 0.5;
         } else {
@@ -63,7 +63,7 @@ function validarRespuesta(contenedor, botonId) {
 }
 
 function handleRespuestaIncorrecta(botonId) {
-    const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
+    const audioIncorrecto = new Audio('../audio/incorrecto.mp3');
     audioIncorrecto.play();
     audioIncorrecto.volume = 0.5;
     
@@ -105,7 +105,7 @@ function mostrarGameOver() {
 
     audio.volume = 0.0;
 
-    const gameOver = new Audio('/audio/gameover.mp3');
+    const gameOver = new Audio('../audio/gameover.mp3');
     gameOver.play();
     gameOver.volume = 0.5;
 }

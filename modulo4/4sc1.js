@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let correctMatches = 0;
 
     // Sonidos
-    const audioCorrecto = new Audio('/audio/correcto.mp3');
-    const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
-    const audioGameOver = new Audio('/audio/gameover.mp3');
+    const audioCorrecto = new Audio('../audio/correcto.mp3');
+    const audioIncorrecto = new Audio('../audio/incorrecto.mp3');
+    const audioGameOver = new Audio('../audio/gameover.mp3');
 
     buttons.forEach(button => {
         button.addEventListener('click', selectWord);
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (correctMatches === containers.length) {
             flecha.style.display = 'block'; // Muestra la flecha al completar todo el juego
             flecha.addEventListener('click', () => {
-                window.location.href = '../final.html'; // Redirige a final.html al hacer clic en la flecha
+                window.location.href = 'game2.html'; // Redirige a final.html al hacer clic en la flecha
             });
         }
     }

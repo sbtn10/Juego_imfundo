@@ -154,7 +154,7 @@ body {
 }
 
 .modal-content {
-    background-image: url('/imagen/fondoderrota.jpg');
+    background-image: url('../imagen/fondoderrota.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     margin: 15% auto;
