@@ -5,12 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const errorMessage = document.getElementById('error-message');
     const hearts = document.querySelectorAll('.heart'); // Corazones
     const modalGameOver = document.getElementById('gameOverModal');
-    const audioCorrecto = new Audio('/audio/correcto.mp3');
-    const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
-    const audioGameOver = new Audio('/audio/gameover.mp3');
+    const audioCorrecto = new Audio('../audio/correcto.mp3');
+    const audioIncorrecto = new Audio('../audio/incorrecto.mp3');
+    const audioGameOver = new Audio('../audio/gameover.mp3');
     const arrowIcon = document.getElementById('arrow-icon');
     const completedMessage = document.getElementById('completed');
+    const muteIcon = document.getElementById('mute');
+    const audio = document.getElementById('audioElement');
+    audio.volume = 0.03;
 
+    let isMuted = false;
+
+    muteIcon.addEventListener('click', () => {
+        if (!isMuted) {
+            audio.muted = true; // Silenciar el audio
+            isMuted = true;
+        } else {
+            audio.muted = false; // Activar el audio
+            isMuted = false;
+        }
+    });
     arrowIcon.style.display = 'none'; // Asegúrate de que la flecha esté oculta inicialmente
 
     let selectedCard = null;
@@ -98,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Mostrar la flecha para avanzar al siguiente juego
             arrowIcon.style.display = 'inline-block';
             arrowIcon.addEventListener('click', function () {
-                window.location.href = '/final.html';
+                window.location.href = '../final.html';
             });
         }
     }

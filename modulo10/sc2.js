@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let correctMatches = 0;
 
     // Sonidos
-    const audioCorrecto = new Audio('/audio/correcto.mp3');
-    const audioIncorrecto = new Audio('/audio/incorrecto.mp3');
-    const audioGameOver = new Audio('/audio/gameover.mp3');
+    const audioCorrecto = new Audio('../audio/correcto.mp3');
+    const audioIncorrecto = new Audio('../audio/incorrecto.mp3');
+    const audioGameOver = new Audio('../audio/gameover.mp3');
 
     buttons.forEach(button => {
         button.addEventListener('click', selectWord);
@@ -117,17 +117,17 @@ const btnCerrarModal = document.getElementsByClassName('cerrar')[0];
 
 // Función para abrir el modal al hacer clic en el icono de ayuda
 iconoAyuda.addEventListener('click', () => {
-  modal.style.display = 'block';
+    modal.style.display = 'block';
 });
 
 // Función para cerrar el modal al hacer clic en el botón de cerrar
 btnCerrarModal.addEventListener('click', () => {
-  modal.style.display = 'none';
+    modal.style.display = 'none';
 });
 
 // Función para cerrar el modal si se hace clic fuera de él
 window.addEventListener('click', (evento) => {
-  if (evento.target === modal) {
-    modal.style.display = 'none';
-  }
+    if (evento.target === modal) {
+        modal.style.display = 'none';
+    }
 });
