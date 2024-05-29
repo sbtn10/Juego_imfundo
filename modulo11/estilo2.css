@@ -187,14 +187,14 @@ body {
 .modal-buttons button {
     margin: 10px;
     padding: 10px 20px;
-    font-size: 12px;
-    border: 2px solid #000;
-    background-color: #f00;
+    font-size: 20px;
+    border: 2px solid #505050;
+    background-color: rgba(30, 68, 255, 0.747);
     border-radius: 1cap;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Playfair Display', cursive;
 }
 
 .modal-content img {
@@ -204,7 +204,7 @@ body {
 
 
 .modal-buttons button:hover {
-    background-color: #ff0;
+    background-color: rgb(119, 217, 255);
     color: #000;
     transform: scale(1.1);
 }
