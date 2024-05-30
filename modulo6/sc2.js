@@ -1,6 +1,6 @@
 const muteIcon = document.querySelector('#mute-icon');
 var audio = document.querySelector('#audioElement');
-audio.volume = 0.3;
+audio.volume = 0.03;
 
 let isMuted = false;
 
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (correctMatches === containers.length) {
             flecha.style.display = 'block'; // Muestra la flecha al completar todo el juego
             flecha.addEventListener('click', () => {
-                window.location.href = '../final.html'; // Redirige a final.html al hacer clic en la flecha
+                window.location.href = 'game3.html'; // Redirige a final.html al hacer clic en la flecha
             });
         }
     }

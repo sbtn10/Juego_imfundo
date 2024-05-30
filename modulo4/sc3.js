@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Sonidos
     const audioCorrecto = new Audio('../audio/correcto.mp3');
     const audioIncorrecto = new Audio('../audio/incorrecto.mp3');
-    const audioGameOver = new Audio('../audio/gameover.mp3');
+    const audioGameOver = new Audio('..audio/gameover.mp3');
 
     let selectedCard = null;
     let selectedWord = null;
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const arrowIcon = document.getElementById('arrow-icon');
             arrowIcon.style.display = 'inline-block'; // Cambia 'inline-block' según el estilo de la flecha en tu CSS
             arrowIcon.addEventListener('click', function() {
-                window.location.href = 'game2.html';
+                window.location.href = '../final.html';
             });
         }
     }
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         reintentarBtn.addEventListener('click', function () {
             modalGameOver.style.display = 'none';
-            window.location.href = '6game1.html'
+            window.location.href = 'game3.html'
         });
 
         salirBtn.addEventListener('click', function () {

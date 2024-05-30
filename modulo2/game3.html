@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto 2</title>
+    <title>Reto 3</title>
     <link rel="stylesheet" href="estilo2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <body>
 
     <div class="container">
-        <p class="texto">¡Reto 2: Completa las oraciones con el verbo "<em>tiene</em>" segun corresponda.</p>
+        <p class="texto">¡Reto 3: Completa las oraciones con un pronombre demostrativo!</p>
         <div class="info">
             <p style="color: #D67D7D;">Vidas</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1);" class="heart">
@@ -46,22 +46,19 @@
     </div>
 
     <div class="oraciones">
-        <p>1. Claudia <span class="contenedor" data-word="2"></span> dos hermanos.</p>
-        <p>2. Mis sobrinos <span class="contenedor" data-word="1"></span> un caballo.</p>
-        <p>3. Yo <span class="contenedor" data-word="4"></span>
-            calor.</p>
-        <p>4. Nosotros <span class="contenedor" data-word="5"></span> mucha suerte.</p>
-        <p>5. ¿ <span class="contenedor" data-word="3"></span>
-            algún plan para el fin de semana?</p>
-
+        <p>1. En la tienda azul, compro (aquí) <span class="contenedor" data-word="3"></span> camisas.</p>
+        <p>2. Me gustan (ahí) <span class="contenedor" data-word="5"></span> manzanas.</p>
+        <p>3. Tengo que leer (aquí) <span class="contenedor" data-word="4"></span> libro.</p>
+        <p>4. Me gustan (allí) <span class="contenedor" data-word="1"></span> calamares.</p>
+        <p>5. Quiero comer (allí) <span class="contenedor" data-word="2"></span> melón.</p>
     </div>
 
     <div class="botones" id="botones-container">
-        <button class="boton" data-word="1">tienen</button>
-        <button class="boton" data-word="2">tiene</button>
-        <button class="boton" data-word="3">Tienes</button>
-        <button class="boton" data-word="4">tengo</button>
-        <button class="boton" data-word="5">tenemos</button>
+        <button class="boton" data-word="1">aquellos</button>
+        <button class="boton" data-word="2">aquel</button>
+        <button class="boton" data-word="3">estas</button>
+        <button class="boton" data-word="4">este</button>
+        <button class="boton" data-word="5">esas</button>
     </div>
 
     <img src="../imagen/dato1.png" alt="dato1" class="imagendato">
@@ -69,7 +66,7 @@
     <!-- Modal -->
     <div id="gameOverModal" class="modal">
         <div class="modal-content">
-            <h2 style="text-align: center; font-family: 'Freeman', sans-serif;">GAME OVER</h2>
+            <h2 style="text-align: center; font-family: 'Press Start 2P', cursive;">GAME OVER</h2>
             <div class="modal-buttons">
                 <button id="reintentarBtn">Reintentar</button>
                 <button id="salirBtn">Salir</button>
@@ -82,42 +79,32 @@
             <div class="cerrar-container">
                 <span class="cerrar">&times;</span>
             </div>
-            <h2>Gramática: El verbo tener </h2>
-            <p>Usamos el verbo <em>tener</em> para indicar posesión. 
-                También usamos el verbo <em>tener</em>  para indicar 
-                edad y algunas expresiones idiomáticas.
+            <h2>Gramática: Pronombre demostrativo </h2>
+            <p>Expresa la situación espacial o temporal de alguien 
+                o algo en relación con la que corresponde al hablante 
+                o al oyente.
             </p>
 
             <table class="tabla-verbo">
                 <tr>
-                    <th>Pronombre</th>
-                    <th>Verbo</th>
-                    <th>Descripción</th>
+                    <td>Pronombres</td>
+                    <td>Singular</td>
+                    <td>Plural</td>
                 </tr>
                 <tr>
-                    <td>Yo</td>
-                    <td>tengo</td>
-                    <td>24 años</td>
+                    <td>Cerca</td>
+                    <td>este</td>
+                    <td>estos</td>
                 </tr>
                 <tr>
-                    <td>Tú</td>
-                    <td>tienes</td>
-                    <td>hambre</td>
+                    <td>Media distancia</td>
+                    <td>ese</td>
+                    <td>esos</td>
                 </tr>
                 <tr>
-                    <td>Él/ella/usted</td>
-                    <td>tiene</td>
-                    <td>suerte</td>
-                </tr>
-                <tr>
-                    <td>Nosotros/as</td>
-                    <td>tenemos</td>
-                    <td>sed</td>
-                </tr>
-                <tr>
-                    <td>Ellos/ellas/ustedes</td>
-                    <td>tienen</td>
-                    <td>una casa</td>
+                    <td>Lejos</td>
+                    <td>aquel</td>
+                    <td>aquellos</td>
                 </tr>
             </table>
         </div>
@@ -139,7 +126,7 @@
         0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
     </svg>
 
-    <script src="sc2.js"></script>
+    <script src="sc3.js"></script>
 </body>
 
 </html>

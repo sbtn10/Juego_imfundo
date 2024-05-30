@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto 3</title>
-    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./estilo3.css">
     <link rel="stylesheet" href="../modal/syle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
     <div class="container">
 
         <div class="game-info">
-            <p class="texto">¡Reto 3: Relaciona Imágenes con su respectiva numericion.</p>
+            <p class="texto">¡Reto 3: Identifica los lugares de la casa.</p>
             <!-- Contenido del banner, como el título del juego y la descripción -->
             <div class="menu-container">
 
@@ -67,32 +67,32 @@
         <div class="images">
             <div class="board">
                 <!-- Imágenes -->
-                <div class="card" data-word="Cuarenta">
-                    <img src="../imagen/40.png" alt="Persona Levitandose">
+                <div class="card" data-word="cocina">
+                    <img src="../imagen/cocina.jpg" alt="Persona Levitandose">
                 </div>
-                <div class="card" data-word="treintayuno">
-                    <img src="../imagen/31.png" alt="Persona Desayunado">
+                <div class="card" data-word="jardin">
+                    <img src="../imagen/jardin.jpg" alt="Persona Desayunado">
                 </div>
-                <div class="card" data-word="Veintiuno">
-                    <img src="../imagen/21.png" alt="Persona Vistiendose">
+                <div class="card" data-word="terraza">
+                    <img src="../imagen/terraza.jpg" alt="Persona Vistiendose">
                 </div>
-                <div class="card" data-word="Ocho">
-                    <img src="../imagen/8.png" alt="Persona Afeitandose">
+                <div class="card" data-word="bano">
+                    <img src="../imagen/baño.jpeg" alt="Persona Afeitandose">
                 </div>
-                <div class="card" data-word="Cien">
-                    <img src="../imagen/100.png" alt="Persona Sentandose">
+                <div class="card" data-word="dormitorio">
+                    <img src="../imagen/dormitorio.jpg" alt="Persona Sentandose">
                 </div>
-                <div class="card" data-word="Diez">
-                    <img src="../imagen/10.png" alt="Persona Secandose">
+                <div class="card" data-word="garaje">
+                    <img src="../imagen/garaje.jpg" alt="Persona Secandose">
                 </div>
-                <div class="card" data-word="Ochenta">
-                    <img src="../imagen/80.png" alt="Persona Bañandose">
+                <div class="card" data-word="sotano">
+                    <img src="../imagen/sotano.jpg" alt="Persona Bañandose">
                 </div>
-                <div class="card" data-word="Doce">
-                    <img src="../imagen/12.png" alt="Persona Cepillandose">
+                <div class="card" data-word="comedor">
+                    <img src="../imagen/comedor.jpg" alt="Persona Cepillandose">
                 </div>
-                <div class="card" data-word="cincuentayocho">
-                    <img src="../imagen/58.png" alt="Persona Durmiendo">
+                <div class="card" data-word="sala">
+                    <img src="../imagen/sala.jpg" alt="Persona Durmiendo">
                 </div>
 
 
@@ -102,15 +102,16 @@
     </div>
     <div class="options">
         <!-- Opciones -->
-        <div class="word" data-word="Veintiuno">Veintiuno</div>
-        <div class="word" data-word="Doce">Doce</div>
-        <div class="word" data-word="Cuarenta">Cuarenta</div>
-        <div class="word" data-word="Ocho">Ocho</div>
-        <div class="word" data-word="Cien"> Cien</div>
-        <div class="word" data-word="Diez">Diez</div>
-        <div class="word" data-word="Ochenta">Ochenta</div>
-        <div class="word" data-word="treintayuno">Treinta y uno</div>
-        <div class="word" data-word="cincuentayocho">Cincuenta y ocho</div>
+        <div class="word" data-word="sala">La sala</div>
+        <div class="word" data-word="jardin">El jardin</div>
+        <div class="word" data-word="cocina">La cocina</div>
+        <div class="word" data-word="comedor">El comedor</div>
+        <div class="word" data-word="bano"> El baño</div>
+        <div class="word" data-word="dormitorio">El dormitorio</div>
+        <div class="word" data-word="terraza">La terraza</div>
+        <div class="word" data-word="sotano">El sótano</div>
+        <div class="word" data-word="garaje">El garaje</div>
+
         <!-- Agrega más opciones aquí -->
     </div>
 
@@ -129,7 +130,7 @@
 
     <div id="gameOverModal" class="modal">
         <div class="modal-content">
-            <h2 style="text-align: center; font-family: 'Freeman', sans-serif;">GAME OVER</h2>
+            <h2 style="text-align: center; font-family: 'Freeman', cursive;">GAME OVER</h2>
             <div class="modal-buttons">
                 <button id="reintentarBtn">Reintentar</button>
                 <button id="salirBtn">Salir</button>
@@ -150,7 +151,7 @@
     <audio id="audioIncorrecto" src="../audio/incorrecto.mp3"></audio>
     <audio id="audioGameOver" src="../audio/gameover.mp3"></audio>
 
-    <script src="script3.js"></script>
+    <script src="sc3.js"></script>
 </body>
 
 </html>

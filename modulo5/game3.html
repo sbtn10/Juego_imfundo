@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto 2</title>
-    <link rel="stylesheet" href="estilo2.css">
+    <title>Reto 3</title>
+    <link rel="stylesheet" href="estilo3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body>
 
     <div class="container">
-        <p class="texto">¡Reto 2: Completa las oraciones con el verbo "<em>tiene</em>" segun corresponda.</p>
+        <p class="texto">¡Reto 3: Conjuga el verbo según corresponda!</p>
         <div class="info">
             <p style="color: #D67D7D;">Vidas</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1);" class="heart">
@@ -46,30 +46,25 @@
     </div>
 
     <div class="oraciones">
-        <p>1. Claudia <span class="contenedor" data-word="2"></span> dos hermanos.</p>
-        <p>2. Mis sobrinos <span class="contenedor" data-word="1"></span> un caballo.</p>
-        <p>3. Yo <span class="contenedor" data-word="4"></span>
-            calor.</p>
-        <p>4. Nosotros <span class="contenedor" data-word="5"></span> mucha suerte.</p>
-        <p>5. ¿ <span class="contenedor" data-word="3"></span>
-            algún plan para el fin de semana?</p>
-
+        <p>1. Tú <span class="contenedor" data-word="3"></span> a tu trabajo temprano todos los días. (ir)</p>
+        <p>2. Yo <span class="contenedor" data-word="5"></span> del trabajo en taxi. (venir)</p>
+        <p>3. Él <span class="contenedor" data-word="4"></span> a comer con nosotros hoy. (venir)</p>
+        <p>4. Nosotros <span class="contenedor" data-word="1"></span> a visitar a nuestros padres. (ir)</p>
+        <p>5. Ellos <span class="contenedor" data-word="2"></span> a Viña del Mar en las vacaciones. (ir)</p>
     </div>
 
     <div class="botones" id="botones-container">
-        <button class="boton" data-word="1">tienen</button>
-        <button class="boton" data-word="2">tiene</button>
-        <button class="boton" data-word="3">Tienes</button>
-        <button class="boton" data-word="4">tengo</button>
-        <button class="boton" data-word="5">tenemos</button>
+        <button class="boton" data-word="1">vamos</button>
+        <button class="boton" data-word="2">van</button>
+        <button class="boton" data-word="3">vas</button>
+        <button class="boton" data-word="4">viene</button>
+        <button class="boton" data-word="5">vengo</button>
     </div>
-
-    <img src="../imagen/dato1.png" alt="dato1" class="imagendato">
 
     <!-- Modal -->
     <div id="gameOverModal" class="modal">
         <div class="modal-content">
-            <h2 style="text-align: center; font-family: 'Freeman', sans-serif;">GAME OVER</h2>
+            <h2 style="text-align: center; font-family: 'Press Start 2P', cursive;">GAME OVER</h2>
             <div class="modal-buttons">
                 <button id="reintentarBtn">Reintentar</button>
                 <button id="salirBtn">Salir</button>
@@ -82,42 +77,45 @@
             <div class="cerrar-container">
                 <span class="cerrar">&times;</span>
             </div>
-            <h2>Gramática: El verbo tener </h2>
-            <p>Usamos el verbo <em>tener</em> para indicar posesión. 
-                También usamos el verbo <em>tener</em>  para indicar 
-                edad y algunas expresiones idiomáticas.
-            </p>
-
+            <h2>Gramática: Verbos <em>"ir"</em> y <em>"venir"</em> </h2>
+            <p>El verbo "ir" se utiliza para indicar movimiento 
+                hacia un lugar, ya sea físico o figurativo. 
+                Se emplea para expresar acciones de desplazamiento 
+                de un lugar a otro.</p>
+            <p>El verbo "venir" se utiliza para indicar movimiento 
+                hacia el lugar donde se encuentra el hablante o hacia 
+                el lugar del que se está hablando. Se emplea para expresar 
+                acciones de desplazamiento hacia el punto de referencia del hablante.</p>
             <table class="tabla-verbo">
                 <tr>
-                    <th>Pronombre</th>
-                    <th>Verbo</th>
-                    <th>Descripción</th>
+                    <td>Pronombres</td>
+                    <td>IR</td>
+                    <td>VENIR</td>
                 </tr>
                 <tr>
                     <td>Yo</td>
-                    <td>tengo</td>
-                    <td>24 años</td>
+                    <td>voy</td>
+                    <td>vengo</td>
                 </tr>
                 <tr>
                     <td>Tú</td>
-                    <td>tienes</td>
-                    <td>hambre</td>
+                    <td>vas</td>
+                    <td>vienes</td>
                 </tr>
                 <tr>
                     <td>Él/ella/usted</td>
-                    <td>tiene</td>
-                    <td>suerte</td>
+                    <td>va</td>
+                    <td>viene</td>
                 </tr>
                 <tr>
                     <td>Nosotros/as</td>
-                    <td>tenemos</td>
-                    <td>sed</td>
+                    <td>vamos</td>
+                    <td>venimos</td>
                 </tr>
                 <tr>
                     <td>Ellos/ellas/ustedes</td>
-                    <td>tienen</td>
-                    <td>una casa</td>
+                    <td>van</td>
+                    <td>vienen</td>
                 </tr>
             </table>
         </div>
@@ -139,7 +137,7 @@
         0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
     </svg>
 
-    <script src="sc2.js"></script>
+    <script src="sc3.js"></script>
 </body>
 
 </html>

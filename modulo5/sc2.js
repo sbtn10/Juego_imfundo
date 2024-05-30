@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const arrowIcon = document.getElementById('arrow-icon');
             arrowIcon.style.display = 'inline-block'; // Cambia 'inline-block' según el estilo de la flecha en tu CSS
             arrowIcon.addEventListener('click', function() {
-                window.location.href = '../final.html';
+                window.location.href = 'game3.html';
             });
         }
     }
