@@ -184,10 +184,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showArrow() {
         const arrowIcon = document.getElementById('arrow-icon');
+        const modal = document.getElementById("modal");
+        modal.style.display="flex";
+        modal.classList.add("show");
         arrowIcon.style.display = 'inline-block';
         arrowIcon.addEventListener('click', () => {
             window.location.href = '../final.html';
         });
+        setTimeout(() => {
+            modal.classList.remove("show");
+            modal.classList.add("hide");
+            setTimeout(() => {
+                modal.style.display = "none";
+                modal.classList.remove("hide");
+            }, 500); 
+        }, 1200); 
     }
 
     // Verifica el valor de totalPairs

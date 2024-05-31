@@ -97,10 +97,21 @@ document.addEventListener('DOMContentLoaded', function () {
         if (allDisabled) {
             // Todas las cartas están deshabilitadas, mostrar la flecha
             const arrowIcon = document.getElementById('arrow-icon');
+            const modal = document.getElementById("modal");
+            modal.style.display="flex";
+            modal.classList.add("show");
             arrowIcon.style.display = 'inline-block'; // Cambia 'inline-block' según el estilo de la flecha en tu CSS
             arrowIcon.addEventListener('click', function() {
                 window.location.href = '../final.html';
             });
+            setTimeout(() => {
+                modal.classList.remove("show");
+                modal.classList.add("hide");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    modal.classList.remove("hide");
+                }, 500); 
+            }, 1200);
         }
     }
 

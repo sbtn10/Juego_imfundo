@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Obtener la carta seleccionada y su cuadro de características
         const selectedCharacterCard = selectedCard.querySelector('.characteristics');
-
+        const modal = document.getElementById("modal");
         // Agregar la característica al cuadro de características asociadas
         const characteristicText = selectedCharacteristic.textContent;
         const characteristicElement = document.createElement('div');
@@ -108,12 +108,22 @@ document.addEventListener('DOMContentLoaded', function () {
         matchedPairs++;
         if (matchedPairs === totalPairs) {
             completedMessage.style.display = 'block';
+            modal.style.display="flex";
+            modal.classList.add("show");
 
             // Mostrar la flecha para avanzar al siguiente juego
             arrowIcon.style.display = 'inline-block';
             arrowIcon.addEventListener('click', function () {
                 window.location.href = '../final.html';
             });
+            setTimeout(() => {
+                modal.classList.remove("show");
+                modal.classList.add("hide");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    modal.classList.remove("hide");
+                }, 500); 
+            }, 1200); 
         }
     }
 
