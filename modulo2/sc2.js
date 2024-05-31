@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.boton');
     const containers = document.querySelectorAll('.contenedor');
     const flecha = document.querySelector('#arrow-icon');
+    const modal = document.getElementById("modal");
     const maxAttempts = 3;
     let attempts = 0;
     let selectedButton = null;
@@ -86,9 +87,19 @@ document.addEventListener('DOMContentLoaded', function () {
     function checkCompletion() {
         if (correctMatches === containers.length) {
             flecha.style.display = 'block'; // Muestra la flecha al completar todo el juego
+            modal.style.display="flex";
+            modal.classList.add("show");            
             flecha.addEventListener('click', () => {
                 window.location.href = 'game3.html'; // Redirige a final.html al hacer clic en la flecha
             });
+            setTimeout(() => {
+                modal.classList.remove("show");
+                modal.classList.add("hide");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    modal.classList.remove("hide");
+                }, 500); 
+            }, 1200); 
         }
     }
 
