@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const arrowIcon = document.getElementById('arrow-icon');
         arrowIcon.style.display = 'inline-block';
         arrowIcon.addEventListener('click', () => {
-            window.location.href = 'final.html';
+            window.location.href = '../final.html';
         });
     }
 
