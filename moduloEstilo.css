@@ -17,6 +17,63 @@ body {
 
 }
 
+.descripcion_juegos {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: left;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  max-width: 600px;
+  
+}
+
+.descripcion_juegos h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #1D4989;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.descripcion_juegos p::before {
+  content: "► "; /* Puedes cambiar el símbolo aquí */
+  color: #1D4989;  /* Cambia el color si lo necesitas */
+  font-weight: bold;
+  margin-right: 5px; /* Espacio entre el símbolo y el texto */
+}
+
+.descripcion_juegos p {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.descripcion_juegos p:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.descripcion_juegos p:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.descripcion_juegos p:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.descripcion_juegos p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 17px;
+  line-height: 1.3;
+}
+
 .white-container {
   flex: 3.5;
   background-color: white;
