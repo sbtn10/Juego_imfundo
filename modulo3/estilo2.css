@@ -168,6 +168,10 @@ body {
     margin-top: 50px;
 }
 
+.icono-ayuda{
+    width: 80px;
+}
+
 .modal-buttons button {
     margin: 10px;
     padding: 10px 20px;
@@ -363,6 +367,7 @@ body {
     height: 25px;
     cursor: pointer;
     fill: #000000;
+    display: none;
 }
 
 /* Estilos cuando se pasa el cursor sobre el icono */
@@ -370,6 +375,16 @@ body {
     fill: #655d5d;
 }
 
+#sound-icon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+    display: block;
+}
 
 @keyframes vibrarLogo {
     0% {
@@ -378,6 +393,19 @@ body {
 
     100% {
         transform: translateY(3px);
+    }
+}
+@media (max-width: 600px) {
+    .modal-contenido {
+        width: 95%;
+        padding: 10px;
+    }
+    .lado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .izquierda, .derecha {
+        width: 100%;
     }
 }
 

@@ -163,7 +163,9 @@ body {
     border-radius: 3cap;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.5);
 }
-
+.icono-ayuda{
+    width: 80px;
+}
 .modal-buttons {
     text-align: center;
     margin-top: 50px;
@@ -363,12 +365,25 @@ body {
     height: 25px;
     cursor: pointer;
     fill: #000000;
+    display: none;
 }
 
 /* Estilos cuando se pasa el cursor sobre el icono */
 #mute-icon:hover {
     fill: #655d5d;
 }
+
+#sound-icon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+    display: block;
+}
+
 
 
 @keyframes vibrarLogo {

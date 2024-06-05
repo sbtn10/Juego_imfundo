@@ -402,6 +402,20 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .modal-contenido {
+        width: 95%;
+        padding: 10px;
+    }
+    .lado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .izquierda, .derecha {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 1309px) and (min-width: 935px) {
     body {
         margin: 0;
