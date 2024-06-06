@@ -122,22 +122,33 @@ flex-wrap: wrap;
     font-size: 16px; /* Establece el tamaño del texto en 20px */
     font-weight: 500; /* Establece el peso del texto en 500 (medium) */
 }
-.mute-button {
+
+/* Estilos para el icono Mute */
+#mute-icon {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    cursor: pointer;
-    fill: #000000
-}
-
-.mute-button svg {
     width: 25px;
     height: 25px;
-    fill: #333333; /* Color del icono */
+    cursor: pointer;
+    fill: #000000;
+    display: none;
 }
 
-.mute-button svg:hover {
-    fill: #666666; /* Color del icono al pasar el cursor */
+/* Estilos cuando se pasa el cursor sobre el icono */
+#mute-icon:hover {
+    fill: #655d5d;
+}
+
+#sound-icon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+    display: block;
 }
 
 /* Estilos para el icono de flecha */

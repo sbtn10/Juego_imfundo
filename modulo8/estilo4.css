@@ -6,7 +6,170 @@ body {
     /* Evita el desbordamiento del fondo animado */
     position: relative;
 }
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.characters-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.imagen-personaje img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+    border: 3px solid white;
+}
+
+.datos {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.datos p {
+    margin: 5px 0;
+}
+
+.modal2-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.modal2 {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgb(0, 0, 0); /* Color de fondo */
+    background-color: rgba(0, 0, 0, 0.4); /* Color de fondo con opacidad */
+}
+
+.modal2-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho */
+    max-width: 600px; /* Ancho máximo */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.characters-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.character-card img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.character-card p {
+    margin-top: 10px;
+    font-size: 16px;
+}
 /* Estilos para el fondo con diseño */
 .background {
     position: absolute;
@@ -137,24 +300,33 @@ flex-wrap: wrap;
     font-size: 16px; /* Establece el tamaño del texto en 20px */
     font-weight: 500; /* Establece el peso del texto en 500 (medium) */
 }
-.mute-button {
+/* Estilos para el icono Mute */
+#mute-icon {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    cursor: pointer;
-    fill: #000000
-}
-
-.mute-button svg {
     width: 25px;
     height: 25px;
-    fill: #333333; /* Color del icono */
+    cursor: pointer;
+    fill: #000000;
+    display: none;
 }
 
-.mute-button svg:hover {
-    fill: #666666; /* Color del icono al pasar el cursor */
+/* Estilos cuando se pasa el cursor sobre el icono */
+#mute-icon:hover {
+    fill: #655d5d;
 }
 
+#sound-icon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+    display: block;
+}
 /* Estilos para el icono de flecha */
 #arrow-icon {
     display: none;

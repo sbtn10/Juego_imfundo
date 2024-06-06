@@ -3,28 +3,54 @@ document.addEventListener('DOMContentLoaded', function () {
     const characteristics = document.querySelectorAll('.word[data-characteristic]');
     const correctMessage = document.getElementById('correct-message');
     const errorMessage = document.getElementById('error-message');
-    const hearts = document.querySelectorAll('.heart'); // Corazones
+    const hearts = document.querySelectorAll('.heart');
     const modalGameOver = document.getElementById('gameOverModal');
     const audioCorrecto = new Audio('../audio/correcto.mp3');
     const audioIncorrecto = new Audio('../audio/incorrecto.mp3');
     const audioGameOver = new Audio('../audio/gameover.mp3');
     const arrowIcon = document.getElementById('arrow-icon');
     const completedMessage = document.getElementById('completed');
-    const muteIcon = document.getElementById('mute');
-    const audio = document.getElementById('audioElement');
+    const charactersModal = document.getElementById('charactersModal');
+    const showCharactersBtn = document.getElementById('showCharactersBtn');
+    const closeBtns = document.querySelectorAll('.close');
+    const restartBtn = document.getElementById('restartBtn');
+    charactersModal.style.display = 'block';
+
+    const muteIcon = document.querySelector('#mute-icon');
+    const soundIcon = document.querySelector('#sound-icon');
+    var audio = document.querySelector('#audioElement');
     audio.volume = 0.03;
 
     let isMuted = false;
 
-    muteIcon.addEventListener('click', () => {
-        if (!isMuted) {
-            audio.muted = true; // Silenciar el audio
-            isMuted = true;
-        } else {
-            audio.muted = false; // Activar el audio
-            isMuted = false;
-        }
+    soundIcon.addEventListener('click', () => {
+        audio.volume = isMuted ? 0.03 : 0;
+        isMuted = !isMuted;
+        const icono = document.getElementById("mute-icon");
+        const icon = document.getElementById("sound-icon");
+        icon.style.display = 'none';
+        icono.style.display = 'block';
     });
+
+    muteIcon.addEventListener('click', () => {
+        audio.volume = isMuted ? 0.03 : 0;
+        isMuted = !isMuted;
+        const icono = document.getElementById("mute-icon");
+        const icon = document.getElementById("sound-icon");
+        icon.style.display = 'block';
+        icono.style.display = 'none';
+    });
+    showCharactersBtn.addEventListener('click', function () {
+        charactersModal.style.display = 'block';
+    });
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            btn.parentElement.parentElement.style.display = 'none';
+        });
+    });
+
+
     arrowIcon.style.display = 'none'; // Asegúrate de que la flecha esté oculta inicialmente
 
     let selectedCard = null;
@@ -108,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
         matchedPairs++;
         if (matchedPairs === totalPairs) {
             completedMessage.style.display = 'block';
-            modal.style.display="flex";
+            modal.style.display = "flex";
             modal.classList.add("show");
 
             // Mostrar la flecha para avanzar al siguiente juego
@@ -122,8 +148,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => {
                     modal.style.display = "none";
                     modal.classList.remove("hide");
-                }, 500); 
-            }, 1200); 
+                }, 500);
+            }, 1200);
         }
     }
 

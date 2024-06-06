@@ -3,7 +3,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #FBF2F2; /* Color de fondo de la página */
-    overflow: hidden; /* Evita el desbordamiento del fondo animado */
     position: relative;
 }
 
@@ -83,7 +82,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    overflow: hidden;
 }
 
 .card img {
@@ -122,22 +120,32 @@ flex-wrap: wrap;
     font-size: 16px; /* Establece el tamaño del texto en 20px */
     font-weight: 500; /* Establece el peso del texto en 500 (medium) */
 }
-.mute-button {
+/* Estilos para el icono Mute */
+#mute-icon {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    cursor: pointer;
-    fill: #000000
-}
-
-.mute-button svg {
     width: 25px;
     height: 25px;
-    fill: #333333; /* Color del icono */
+    cursor: pointer;
+    fill: #000000;
+    display: none;
 }
 
-.mute-button svg:hover {
-    fill: #666666; /* Color del icono al pasar el cursor */
+/* Estilos cuando se pasa el cursor sobre el icono */
+#mute-icon:hover {
+    fill: #655d5d;
+}
+
+#sound-icon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+    display: block;
 }
 
 /* Estilos para el icono de flecha */
@@ -526,7 +534,6 @@ flex-wrap: wrap;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
-            overflow: hidden;
         }
         
        
@@ -579,7 +586,6 @@ flex-wrap: wrap;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        overflow: hidden;
     }
     .oraciones {
         margin-left: 20%;

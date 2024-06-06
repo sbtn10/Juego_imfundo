@@ -1,19 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const muteIcon = document.getElementById('mute');
-    const audio = document.getElementById('audioElement');
-    audio.volume = 0.03;
+    const muteIcon = document.querySelector('#mute-icon');
+const soundIcon = document.querySelector('#sound-icon');
+var audio = document.querySelector('#audioElement');
+audio.volume = 0.03;
 
-    let isMuted = false;
+let isMuted = false;
 
-    muteIcon.addEventListener('click', () => {
-        if (!isMuted) {
-            audio.muted = true; // Silenciar el audio
-            isMuted = true;
-        } else {
-            audio.muted = false; // Activar el audio
-            isMuted = false;
-        }
-    });
+soundIcon.addEventListener('click', () => {
+    audio.volume = isMuted ? 0.03 : 0;
+    isMuted = !isMuted;
+    const icono = document.getElementById("mute-icon");
+    const icon = document.getElementById("sound-icon");
+    icon.style.display = 'none';
+    icono.style.display = 'block';
+});
+
+muteIcon.addEventListener('click', () => {
+    audio.volume = isMuted ? 0.03 : 0;
+    isMuted = !isMuted;
+    const icono = document.getElementById("mute-icon");
+    const icon = document.getElementById("sound-icon");
+    icon.style.display = 'block';
+    icono.style.display = 'none';
+});
 
     const correctMessage = document.getElementById('correct-message');
     const errorMessage = document.getElementById('error-message');

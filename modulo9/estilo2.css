@@ -344,6 +344,10 @@ body {
     animation: corazonRoto 1s ease forwards;
 }
 
+.icono-ayuda{
+    width: 80px;
+}
+
 /* Estilos para el icono de flecha */
 #arrow-icon {
     display: none;
@@ -384,11 +388,23 @@ body {
     height: 25px;
     cursor: pointer;
     fill: #000000;
+    display: none;
 }
 
 /* Estilos cuando se pasa el cursor sobre el icono */
 #mute-icon:hover {
     fill: #655d5d;
+}
+
+#sound-icon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+    display: block;
 }
 
 
