@@ -594,7 +594,9 @@ flex-wrap: wrap;
 
 @media screen and (min-width: 680px) and (max-width: 899px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
-    
+    .modalNext-content p{
+        font-size: 1.0em;
+    }
     
     .container {
         max-width: 90%; /* Cambia a un porcentaje del ancho de la pantalla */
@@ -652,7 +654,9 @@ flex-wrap: wrap;
 @media screen and (min-width: 600px) and (max-width: 679px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
    
-   
+    .modalNext-content p{
+        font-size: 0.8em;
+    }
     .mute-button {
         display: none;
     }
@@ -695,6 +699,9 @@ flex-wrap: wrap;
         width: 90%;
         margin-top: -20px;
         order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
+    }
+    .modalNext-content p{
+        font-size: 0.8em;
     }
     .board {
       

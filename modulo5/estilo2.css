@@ -464,6 +464,9 @@ flex-wrap: wrap;
         width: 200px;
         justify-content: center;
     }
+    .modalNext-content p{
+        font-size: 1.5em;
+    }
 
     .info p {
         margin-left: 10px;
@@ -568,6 +571,10 @@ flex-wrap: wrap;
         margin-left: auto;
         margin-right: auto;
     }
+
+    .modalNext-content p{
+        font-size: 1.5em;
+    }
     .board {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas */
@@ -603,7 +610,9 @@ flex-wrap: wrap;
         margin-left: auto;
         margin-right: auto;
     }
-    
+    .modalNext-content p{
+        font-size: 1.0em;
+    }
     .options {
         width: 90%;
         margin-top: -20px;
@@ -669,6 +678,9 @@ flex-wrap: wrap;
         margin-top: -20px;
         order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
     }
+    .modalNext-content p{
+        font-size: 0.8em;
+    }
     .board {
       
         gap: 12px; /* Espacio entre elementos */
@@ -701,7 +713,9 @@ flex-wrap: wrap;
       
         gap: 12px; /* Espacio entre elementos */
     }
-
+    .modalNext-content p{
+        font-size: 0.8em;
+    }
     .card {
         width: 120px;
         height: 120px;

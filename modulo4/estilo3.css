@@ -669,6 +669,9 @@ flex-wrap: wrap;
         margin-top: -20px;
         order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
     }
+    .modalNext-content p{
+        font-size: 0.8em;
+    }
     .board {
       
         gap: 12px; /* Espacio entre elementos */
@@ -696,6 +699,9 @@ flex-wrap: wrap;
         width: 90%;
         margin-top: -20px;
         order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
+    }
+    .modalNext-content p{
+        font-size: 0.8em;
     }
     .board {
       

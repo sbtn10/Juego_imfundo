@@ -650,7 +650,9 @@ body {
 @media screen and (min-width: 600px) and (max-width: 679px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
    
-   
+    .modalNext-content p{
+        font-size: 0.8em;
+     }
     .mute-button {
         display: none;
     }
@@ -677,7 +679,9 @@ body {
 
 @media screen and (min-width: 200px) and (max-width: 599px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
-   
+    .modalNext-content p{
+        font-size: 0.8em;
+     }
    
     .mute-button {
         display: none;

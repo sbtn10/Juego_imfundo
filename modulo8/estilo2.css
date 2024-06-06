@@ -674,7 +674,9 @@ html, body {
 
 @media screen and (min-width: 600px) and (max-width: 679px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
-   
+    .modalNext-content p{
+        font-size: 0.8em;
+     }
    
     .mute-button {
         display: none;
@@ -703,7 +705,9 @@ html, body {
 @media screen and (min-width: 500px) and (max-width: 599px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
    
-   
+    .modalNext-content p{
+        font-size: 0.8em;
+     }
     .mute-button {
         display: none;
     }
@@ -752,7 +756,9 @@ html, body {
         margin-right: -90px; /* Reducir el margen izquierdo */
         /* Agrega más ajustes según sea necesario */
     }
- 
+    .modalNext-content p{
+        font-size: 0.8em;
+     }
 
     .texto {
         font-size: 13px;

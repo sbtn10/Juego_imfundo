@@ -256,7 +256,7 @@ body {
 }
 
 .modalNext-content p {
-    font-size: 1.5em;
+    font-size: 0.8em;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -350,6 +350,9 @@ body {
     .container{
         margin-left: 8%;
     }
+    .modalNext-content p{
+        font-size: 1.5em;
+    }
     .imagendato {
         margin-top: 10%;
         margin-left: 10%;
@@ -383,7 +386,9 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
-
+    .modalNext-content p{
+        font-size: 1.5em;
+    }
     .texto {
         font-size: 18px;
     }
@@ -506,7 +511,9 @@ body {
     .oraciones p {
         font-size: 25px;
     }
-
+    .modalNext-content p{
+        font-size: 1.5em;
+    }
     .botones {
         margin-top: 50px;
         margin-right: 500px;

@@ -344,7 +344,7 @@ body {
 }
 
 .modalNext-content p {
-    font-size: 1.5em;
+    font-size: 0.8em;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -495,7 +495,9 @@ body {
     .texto {
         font-size: 18px;
     }
-
+    .modalNext-content p{
+        font-size: 1.5em;
+    }
     .imagendato {
         display:flex;
         position: absolute;

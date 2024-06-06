@@ -668,6 +668,9 @@ flex-wrap: wrap;
         margin-top: -20px;
         order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
     }
+    .modalNext-content p{
+        font-size: 0.8em;
+    }
     .board {
       
         gap: 12px; /* Espacio entre elementos */
@@ -683,6 +686,9 @@ flex-wrap: wrap;
    
     .mute-button {
         display: none;
+    }
+    .modalNext-content p{
+        font-size: 0.8em;
     }
     .images {
         width: 100%; /* Cambia a un porcentaje del ancho de la pantalla */

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const words = document.querySelectorAll('.word');
     const hearts = document.querySelectorAll('.heart');
     const arrowIcon = document.getElementById('arrow-icon');
+    const modal2 = document.getElementById("modal");
     let lives = hearts.length;
     let correctCount = 0;
     const totalAdverbs = document.querySelectorAll('.word[data-type="frequency"]').length;
@@ -64,9 +65,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showArrowIcon() {
         arrowIcon.style.display = 'block';
+        modal2.style.display="flex";
+        modal2.classList.add("show");
         arrowIcon.addEventListener('click', function () {
             window.location.href = '../final.html';
         });
+        setTimeout(() => {
+            modal2.classList.remove("show");
+            modal2.classList.add("hide");
+            setTimeout(() => {
+                modal2.style.display = "none";
+                modal2.classList.remove("hide");
+            }, 500); 
+        }, 1200); 
     }
 });
 
