@@ -2,7 +2,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #FBF2F2; /* Color de fondo de la página */
+    background-color: #FBF2F2;
+    /* Color de fondo de la página */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,8 @@ body {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -51,7 +53,8 @@ html, body {
     transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -61,9 +64,9 @@ html, body {
 
 .flip-card-front {
     background: linear-gradient(135deg, #1e90ff 25%, transparent 25%) -50px 0,
-                linear-gradient(225deg, #1e90ff 25%, transparent 25%) -50px 0,
-                linear-gradient(315deg, #1e90ff 25%, transparent 25%),
-                linear-gradient(45deg, #1e90ff 25%, transparent 25%);
+        linear-gradient(225deg, #1e90ff 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, #1e90ff 25%, transparent 25%),
+        linear-gradient(45deg, #1e90ff 25%, transparent 25%);
     background-size: 100px 100px;
     background-color: #B1CFC8;
     display: flex;
@@ -81,9 +84,9 @@ html, body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #1e90ff 25%, transparent 25%) -50px 0,
-                linear-gradient(225deg, #1e90ff 25%, transparent 25%) -50px 0,
-                linear-gradient(315deg, #1e90ff 25%, transparent 25%),
-                linear-gradient(45deg, #1e90ff 25%, transparent 25%);
+        linear-gradient(225deg, #1e90ff 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, #1e90ff 25%, transparent 25%),
+        linear-gradient(45deg, #1e90ff 25%, transparent 25%);
     background-size: 100px 100px;
     background-color: #B1CFC8;
     transform: rotateY(180deg);
@@ -118,7 +121,8 @@ html, body {
     font-weight: bolder;
 }
 
-.nombre-personaje, .nombre-frontal {
+.nombre-personaje,
+.nombre-frontal {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -132,12 +136,19 @@ html, body {
 }
 
 @keyframes backgroundAnimation {
-    0% { background-position: 0 0, 0 0, 0 0, 0 0; }
-    100% { background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px; }
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px;
+    }
 }
+
 .next-button-container {
     position: fixed;
-    bottom: 20px; /* Ajusta esta propiedad según sea necesario para la separación desde la parte inferior */
+    bottom: 20px;
+    /* Ajusta esta propiedad según sea necesario para la separación desde la parte inferior */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -160,11 +171,14 @@ html, body {
 #next-button:hover {
     background-color: #45a049;
 }
+
 /* Animación al hacer hover */
 .carta:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada */
 }
+
 /* Estilos para el fondo con diseño */
 .background {
     position: absolute;
@@ -172,20 +186,30 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('patron.png'); /* Ruta de la imagen de fondo con diseño */
-    opacity: 0.5; /* Opacidad inicial */
-    animation: animateBackground 1s linear infinite alternate; /* Animación del fondo */
+    background-image: url('patron.png');
+    /* Ruta de la imagen de fondo con diseño */
+    opacity: 0.5;
+    /* Opacidad inicial */
+    animation: animateBackground 1s linear infinite alternate;
+    /* Animación del fondo */
 }
+
 @keyframes animateBackground {
     0% {
-        opacity: 0.5; /* Opacidad inicial */
-        transform: translateY(0); /* Sin movimiento inicial */
+        opacity: 0.5;
+        /* Opacidad inicial */
+        transform: translateY(0);
+        /* Sin movimiento inicial */
     }
+
     100% {
-        opacity: 0.6; /* Opacidad final */
-        transform: translateY(-10px); /* Movimiento hacia arriba */
+        opacity: 0.6;
+        /* Opacidad final */
+        transform: translateY(-10px);
+        /* Movimiento hacia arriba */
     }
 }
+
 .container {
     background-image: linear-gradient(to right, #5f66e2, #414478);
     border-radius: 0.4pc;
@@ -219,7 +243,7 @@ html, body {
     fill: #655d5d;
 }
 
-#sound-icon{
+#sound-icon {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -229,6 +253,7 @@ html, body {
     fill: #000000;
     display: block;
 }
+
 /* Estilos para el icono de flecha */
 #arrow-icon {
     display: none;
@@ -264,18 +289,23 @@ html, body {
 .texto {
     font-size: 15px;
     font-weight: bold;
-    color: #ffffff;;
-    
+    color: #ffffff;
+    ;
+
 }
 
 
 
 .action-text {
     position: absolute;
-    bottom: 5px; /* Ajusta la posición del texto */
-    left: 50%; /* Centra el texto horizontalmente */
-    transform: translateX(-50%); /* Centra el texto horizontalmente */
-    display: none; /* Oculta el texto inicialmente */
+    bottom: 5px;
+    /* Ajusta la posición del texto */
+    left: 50%;
+    /* Centra el texto horizontalmente */
+    transform: translateX(-50%);
+    /* Centra el texto horizontalmente */
+    display: none;
+    /* Oculta el texto inicialmente */
 }
 
 
@@ -284,6 +314,7 @@ html, body {
         opacity: 1;
         transform: scale(1);
     }
+
     100% {
         opacity: 0;
         transform: scale(0.5);
@@ -329,21 +360,27 @@ html, body {
 .game-info {
     display: flex;
     align-items: center;
-    width: calc(100% - 100px); /* Resta el ancho del contenedor de los corazones más un margen adicional */
+    width: calc(100% - 100px);
+    /* Resta el ancho del contenedor de los corazones más un margen adicional */
     justify-content: space-between;
-    padding: 0 20px; /* Agrega un relleno a los lados */
-     /* Ocupa todo el ancho disponible */
-    max-width: 1000px; /* Establece un ancho máximo */
+    padding: 0 20px;
+    /* Agrega un relleno a los lados */
+    /* Ocupa todo el ancho disponible */
+    max-width: 1000px;
+    /* Establece un ancho máximo */
     margin: 0 auto;
 }
 
 
 .hearts-container p2 {
-    font-family: 'Inter', sans-serif; /* Cambia el tipo de letra a Inter */
-    font-size: 16px; /* Establece el tamaño del texto en 16px */
-    font-weight: 800; /* Establece el peso del texto en 800 (extrabold) */
+    font-family: 'Inter', sans-serif;
+    /* Cambia el tipo de letra a Inter */
+    font-size: 16px;
+    /* Establece el tamaño del texto en 16px */
+    font-weight: 800;
+    /* Establece el peso del texto en 800 (extrabold) */
     color: #D67D7D;
-    
+
 }
 
 
@@ -351,12 +388,15 @@ html, body {
 .hearts-container {
     display: flex;
     align-items: center;
-    border: 2px solid #FFFFFF; /* Agrega un borde al contenedor */
-    padding: 7px; /* Agrega espacio interno alrededor del contenido */
-    border-radius: 10px; /* Agrega bordes redondeados al contenedor */
+    border: 2px solid #FFFFFF;
+    /* Agrega un borde al contenedor */
+    padding: 7px;
+    /* Agrega espacio interno alrededor del contenido */
+    border-radius: 10px;
+    /* Agrega bordes redondeados al contenedor */
     background-color: #FFFFFF;
-        
-    
+
+
 }
 
 
@@ -371,9 +411,11 @@ html, body {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-8px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -384,7 +426,7 @@ html, body {
     body {
         margin: 0;
     }
-    
+
     .container {
         max-width: 1289px;
         height: 100px;
@@ -432,7 +474,7 @@ html, body {
     .botones button {
         margin-bottom: 45px;
     }
-    
+
 
 }
 
@@ -440,85 +482,103 @@ html, body {
     body {
         margin: 0;
     }
+
     .images {
         /* Ajusta el margen derecho para mover las imágenes hacia el lado */
-        margin-left: -290px; /* Margen izquierdo para evitar que las imágenes se superpongan al banner */
+        margin-left: -290px;
+        /* Margen izquierdo para evitar que las imágenes se superpongan al banner */
     }
+
     .container {
         max-width: 1289px;
         height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
-    
-    
+
+
     .board {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas */
-        gap: 20px; /* Espacio entre elementos */
+        grid-template-columns: repeat(3, 1fr);
+        /* Divide en tres columnas */
+        gap: 20px;
+        /* Espacio entre elementos */
     }
+
     .options {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Divide en tres columnas */
-        gap: 8px; /* Espacio entre elementos */
-    }
-        
-       
-        .card {
-            width: 150px;
-            height: 130px;
-            margin-top:-5px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-        
-       
-        .oraciones {
-            margin-left: 20%;
-            float: left;
-        }
-       
-       
-    
-    
-    
-       
-    
-        
+        grid-template-columns: repeat(2, 1fr);
+        /* Divide en tres columnas */
+        gap: 8px;
+        /* Espacio entre elementos */
     }
 
 
-    
+    .card {
+        width: 150px;
+        height: 130px;
+        margin-top: -5px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
 
-   @media screen and (min-width: 1200px) and (max-width: 1229px) {
+
+    .oraciones {
+        margin-left: 20%;
+        float: left;
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1229px) {
     body {
         margin: 0;
     }
+
     .images {
-    
+
         margin-top: 100px;
         margin-right: 260px;
-        margin-left: -290px; /* Margen superior para evitar que las imágenes se superpongan al banner */
-         /* Margen inferior para evitar que las imágenes se superpongan al encabezado del juego */
+        margin-left: -290px;
+        /* Margen superior para evitar que las imágenes se superpongan al banner */
+        /* Margen inferior para evitar que las imágenes se superpongan al encabezado del juego */
     }
+
     .container {
         max-width: 1289px;
         height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .board {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas */
-        gap: 12px; /* Espacio entre elementos */
+        grid-template-columns: repeat(3, 1fr);
+        /* Divide en tres columnas */
+        gap: 12px;
+        /* Espacio entre elementos */
     }
+
     .options {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Divide en dos columnas */
-        gap: 2px; /* Espacio entre elementos */
+        grid-template-columns: repeat(2, 1fr);
+        /* Divide en dos columnas */
+        gap: 2px;
+        /* Espacio entre elementos */
     }
+
     .card {
         width: 150px;
         height: 130px;
@@ -528,38 +588,50 @@ html, body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         cursor: pointer;
     }
+
     .oraciones {
         margin-left: 20%;
         float: left;
     }
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1199px) {
     body {
         margin: 0;
     }
+
     .images {
-    
+
         margin-top: 100px;
         margin-right: 260px;
-        margin-left: -290px; /* Margen superior para evitar que las imágenes se superpongan al banner */
-         /* Margen inferior para evitar que las imágenes se superpongan al encabezado del juego */
+        margin-left: -290px;
+        /* Margen superior para evitar que las imágenes se superpongan al banner */
+        /* Margen inferior para evitar que las imágenes se superpongan al encabezado del juego */
     }
+
     .container {
         max-width: 1289px;
         height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .board {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas */
-        gap: 16px; /* Espacio entre elementos */
+        grid-template-columns: repeat(3, 1fr);
+        /* Divide en tres columnas */
+        gap: 16px;
+        /* Espacio entre elementos */
     }
+
     .options {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Divide en dos columnas */
-        gap: 1px; /* Espacio entre elementos */
+        grid-template-columns: repeat(2, 1fr);
+        /* Divide en dos columnas */
+        gap: 1px;
+        /* Espacio entre elementos */
     }
+
     .card {
         width: 150px;
         height: 130px;
@@ -569,38 +641,50 @@ html, body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         cursor: pointer;
     }
+
     .oraciones {
         margin-left: 20%;
         float: left;
     }
 }
+
 @media screen and (min-width: 1101px) and (max-width: 1199px) {
     body {
         margin: 0;
     }
+
     .images {
-    
+
         margin-top: 100px;
         margin-right: 260px;
-        margin-left: -290px; /* Margen superior para evitar que las imágenes se superpongan al banner */
-         /* Margen inferior para evitar que las imágenes se superpongan al encabezado del juego */
+        margin-left: -290px;
+        /* Margen superior para evitar que las imágenes se superpongan al banner */
+        /* Margen inferior para evitar que las imágenes se superpongan al encabezado del juego */
     }
+
     .container {
         max-width: 1289px;
         height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .board {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas */
-        gap: 16px; /* Espacio entre elementos */
+        grid-template-columns: repeat(3, 1fr);
+        /* Divide en tres columnas */
+        gap: 16px;
+        /* Espacio entre elementos */
     }
+
     .options {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Divide en dos columnas */
-        gap: 1px; /* Espacio entre elementos */
+        grid-template-columns: repeat(2, 1fr);
+        /* Divide en dos columnas */
+        gap: 1px;
+        /* Espacio entre elementos */
     }
+
     .card {
         width: 150px;
         height: 130px;
@@ -610,39 +694,46 @@ html, body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         cursor: pointer;
     }
+
     .oraciones {
         margin-left: 20%;
         float: left;
     }
 }
+
 @media screen and (min-width: 680px) and (max-width: 1100px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
-    
-    
+
+
     .container {
-        max-width: 90%; /* Cambia a un porcentaje del ancho de la pantalla */
+        max-width: 90%;
+        /* Cambia a un porcentaje del ancho de la pantalla */
         height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .options {
         width: 90%;
         margin-top: -20px;
-        order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
+        order: 2 !important;
+        /* ¡Agrega !important para priorizar este estilo! */
     }
-    
-    
+
+
     .oraciones p {
-        font-size: 25px; /* Ajusta el tamaño de fuente de las oraciones */
+        font-size: 25px;
+        /* Ajusta el tamaño de fuente de las oraciones */
     }
-    
+
     .botones {
-        text-align: center; /* Centra los botones horizontalmente */
-        margin-top: 20px; /* Ajusta el margen superior de los botones */
+        text-align: center;
+        /* Centra los botones horizontalmente */
+        margin-top: 20px;
+        /* Ajusta el margen superior de los botones */
     }
-    
-   
+
+
 
     /* Oculta el icono de mute */
     .mute-button {
@@ -650,166 +741,217 @@ html, body {
     }
 
     .card {
-        width: 100%; /* Cambia a un porcentaje del ancho de la pantalla */
+        width: 100%;
+        /* Cambia a un porcentaje del ancho de la pantalla */
         /* Permite que la altura se ajuste automáticamente */
-        max-width: 200px; /* Establece un ancho máximo para las tarjetas */
-        margin-top: -20px; /* Ajusta el margen superior */
-        margin-bottom: 20px; /* Ajusta el margen inferior */
-        margin-left: auto; /* Centra horizontalmente */
-        margin-right: auto; /* Centra horizontalmente */
+        max-width: 200px;
+        /* Establece un ancho máximo para las tarjetas */
+        margin-top: -20px;
+        /* Ajusta el margen superior */
+        margin-bottom: 20px;
+        /* Ajusta el margen inferior */
+        margin-left: auto;
+        /* Centra horizontalmente */
+        margin-right: auto;
+        /* Centra horizontalmente */
     }
 
 
     .images {
-        width: 100%; /* Cambia a un porcentaje del ancho de la pantalla */
-       
-        margin-bottom: 50px; /* Ajusta el margen inferior */
-        margin-left: -160px; 
-        margin-right: 30px; 
+        width: 100%;
+        /* Cambia a un porcentaje del ancho de la pantalla */
+
+        margin-bottom: 50px;
+        /* Ajusta el margen inferior */
+        margin-left: -160px;
+        margin-right: 30px;
     }
+
     .hearts-container p2 {
-        display: none; /* Oculta la palabra "Vidas" */
+        display: none;
+        /* Oculta la palabra "Vidas" */
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 679px) {
+
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
-    .modalNext-content p{
+    .modalNext-content p {
         font-size: 0.8em;
-     }
-   
+    }
+
     .mute-button {
         display: none;
     }
+
     .images {
-        width: 100%; /* Cambia a un porcentaje del ancho de la pantalla */
-       
-        margin-bottom: 50px; /* Ajusta el margen inferior */
-        margin-left: -130px; 
-        margin-right: 30px; 
+        width: 100%;
+        /* Cambia a un porcentaje del ancho de la pantalla */
+
+        margin-bottom: 50px;
+        /* Ajusta el margen inferior */
+        margin-left: -130px;
+        margin-right: 30px;
     }
+
     .options {
         width: 90%;
         margin-top: -20px;
-        order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
+        order: 2 !important;
+        /* ¡Agrega !important para priorizar este estilo! */
     }
+
     .board {
-      
-        gap: 12px; /* Espacio entre elementos */
+
+        gap: 12px;
+        /* Espacio entre elementos */
     }
+
     .hearts-container p2 {
-        display: none; /* Oculta la palabra "Vidas" */
+        display: none;
+        /* Oculta la palabra "Vidas" */
     }
 }
 
 @media screen and (min-width: 500px) and (max-width: 599px) {
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
-   
-    .modalNext-content p{
+
+    .modalNext-content p {
         font-size: 0.8em;
-     }
+    }
+
     .mute-button {
         display: none;
     }
+
     .images {
-        width: 100%; /* Cambia a un porcentaje del ancho de la pantalla */
-       
-        margin-bottom: 50px; /* Ajusta el margen inferior */
-        margin-left: -27px; 
-        margin-right: 30px; 
+        width: 100%;
+        /* Cambia a un porcentaje del ancho de la pantalla */
+
+        margin-bottom: 50px;
+        /* Ajusta el margen inferior */
+        margin-left: -27px;
+        margin-right: 30px;
     }
+
     .options {
         width: 90%;
         margin-top: -20px;
-        order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
+        order: 2 !important;
+        /* ¡Agrega !important para priorizar este estilo! */
     }
+
     .board {
-      
-        gap: 12px; /* Espacio entre elementos */
+
+        gap: 12px;
+        /* Espacio entre elementos */
     }
 
     .card {
         width: 120px;
         height: 120px;
-      
+
     }
+
     .hearts-container p2 {
-        display: none; /* Oculta la palabra "Vidas" */
+        display: none;
+        /* Oculta la palabra "Vidas" */
     }
 }
 
 @media screen and (min-width: 200px) and (max-width: 499px) {
+
     /* Ajustes específicos para dispositivos con anchura entre 301px y 899px */
     .container {
-        max-width: 90%; /* Cambia a un porcentaje del ancho de la pantalla */
+        max-width: 90%;
+        /* Cambia a un porcentaje del ancho de la pantalla */
         height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .game-info,
     .game-controls {
-        margin-left: -4%; /* Reducir el margen izquierdo */
+        margin-left: -4%;
+        /* Reducir el margen izquierdo */
         /* Agrega más ajustes según sea necesario */
     }
 
     .hearts-container {
-        margin-right: -90px; /* Reducir el margen izquierdo */
+        margin-right: -90px;
+        /* Reducir el margen izquierdo */
         /* Agrega más ajustes según sea necesario */
     }
-    .modalNext-content p{
+
+    .modalNext-content p {
         font-size: 0.8em;
-     }
+    }
 
     .texto {
         font-size: 13px;
         font-weight: bold;
         color: #000;
         margin-bottom: 10px;
-         /* Espacio entre el texto y el contenedor de los corazones */
+        /* Espacio entre el texto y el contenedor de los corazones */
     }
+
     .game-controls {
-        order: 2; /* Establecer el orden del elemento en la columna */
+        order: 2;
+        /* Establecer el orden del elemento en la columna */
     }
+
     .mute-button {
         display: none;
     }
+
     .images {
-        width: 100%; /* Cambia a un porcentaje del ancho de la pantalla */
-       
-        margin-bottom: 50px; /* Ajusta el margen inferior */
-        margin-left: -27px; 
-        margin-right: 30px; 
+        width: 100%;
+        /* Cambia a un porcentaje del ancho de la pantalla */
+
+        margin-bottom: 50px;
+        /* Ajusta el margen inferior */
+        margin-left: -27px;
+        margin-right: 30px;
     }
+
     .options {
         width: 90%;
         margin-top: -20px;
-        order: 2 !important; /* ¡Agrega !important para priorizar este estilo! */
+        order: 2 !important;
+        /* ¡Agrega !important para priorizar este estilo! */
     }
+
     .board {
-      
-        gap: 12px; /* Espacio entre elementos */
+
+        gap: 12px;
+        /* Espacio entre elementos */
     }
 
     .card {
         width: 90px;
         height: 90px;
-      
+
     }
+
     .hearts-container p2 {
-        display: none; /* Oculta la palabra "Vidas" */
+        display: none;
+        /* Oculta la palabra "Vidas" */
     }
-   
-    
+
+
 }
+
 .tutorial-container {
     position: fixed;
     top: 50%;
-    left: 20px; /* Ajusta el valor según tu preferencia */
+    left: 20px;
+    /* Ajusta el valor según tu preferencia */
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 5px;
-    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
     display: flex;
     align-items: center;
 }
@@ -825,9 +967,11 @@ html, body {
 .carta {
     cursor: pointer;
     border: 2px solid #FF7F50;
-    position: relative; /* Añadido */
+    position: relative;
+    /* Añadido */
 }
 
 .tutorial-container.clicked {
-    display: none; /* Oculta el contenedor del tutorial cuando se ha hecho clic en una carta */
+    display: none;
+    /* Oculta el contenedor del tutorial cuando se ha hecho clic en una carta */
 }
