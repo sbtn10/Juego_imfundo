@@ -3,9 +3,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #FBF2F2;
-    /* Color de fondo de la página */
-    overflow: hidden;
-    /* Evita el desbordamiento del fondo animado */
     position: relative;
 }
 
@@ -107,7 +104,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    overflow: hidden;
     display: inline-block;
 }
 
@@ -688,7 +684,6 @@ body {
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        overflow: hidden;
     }
 
     .oraciones {

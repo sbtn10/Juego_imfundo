@@ -6,7 +6,6 @@ body {
     margin: 0 auto;
     height: 100px;
     max-height: 800px;
-    overflow: hidden;
 }
 
 /* Estilos para el contenedor principal */

@@ -513,7 +513,6 @@ body {
 
     body {
         margin: 0;
-        overflow: visible; /* Anula el overflow: hidden; */
     }
     
 
