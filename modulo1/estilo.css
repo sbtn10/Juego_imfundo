@@ -186,7 +186,7 @@ flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease;
 }
 
 .modalNext-content {
@@ -202,6 +202,7 @@ flex-wrap: wrap;
 }
 .modalNext.show {
     opacity: 1;
+    display: flex;
 }
 
 .modalNext.hide {
