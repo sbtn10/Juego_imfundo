@@ -222,6 +222,9 @@ body {
     font-weight: bold;
 }
 
+.icono-ayuda{
+    width: 80px;
+}
 
 .modal-buttons button {
     margin: 10px;

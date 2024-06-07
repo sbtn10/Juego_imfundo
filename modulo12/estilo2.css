@@ -77,6 +77,9 @@ body {
     font-weight: bold;
 }
 
+.icono-ayuda{
+    width: 80px;
+}
 .info {
     align-items: center;
     justify-content: center;

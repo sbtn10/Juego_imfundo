@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto 2</title>
-    <link rel="stylesheet" href="estilo2.css">
+    <title>Reto 3</title>
+    <link rel="stylesheet" href="estilo3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -17,53 +17,97 @@
 <body>
 
     <div class="container">
-        <p class="texto">¡Reto 2: Completa las siguientes oraciones con las palabras del recuadro:</p>
+        <p class="texto">¡Reto 3: Seleccione las imagenes y responda..</p>
         <div class="info">
             <p style="color: #D67D7D;">Vidas</p>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1); "class="heart">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1);"
+                class="heart">
                 <path
                     d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1);"class="heart">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1);"
+                class="heart">
                 <path
                     d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1);"class="heart">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgba(214, 125, 125, 1);"
+                class="heart">
                 <path
                     d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
             </svg>
         </div>
-        <svg id="abrirModal" class="icono-ayuda" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-            viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="feather feather-help-circle" cursor="pointer">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M9.09 9a3 3 0 1 1 5.83 1c0 2-3 3-3 3"></path>
-            <line x1="12" y1="17" x2="12" y2="17"></line>
-
-        </svg>
     </div>
 
-    <div class="oraciones">
-        <p>1. <span class="contenedor" data-word="4"></span> le
-            gusta la comida mexicana. </p>
-        <p>2. <span class="contenedor" data-word="1"></span> le
-            gusta bailar.</p>
-        <p>3. <span class="contenedor" data-word="2"></span> te
-            gusta hacer ejercicios.</p>
-        <p>4. <span class="contenedor" data-word="5"></span>
-            les gusta el asado argentino.</p>
-        <p>5. <span class="contenedor" data-word="3"></span> me
-            gusta mucho las arepas.</p>
+    <!-- Modal -->
+    <div id="profileModal" class="modalperfil">
+        <div class="modalperfil-content">
+            <span class="close">&times;</span>
+            <p id="profileText"></p>
+        </div>
     </div>
 
-    <div class="botones" id="botones-container">
-        <button class="boton" data-word="1">A mi
-            esposo</button>
-        <button class="boton" data-word="2">A ti</button>
-        <button class="boton" data-word="3">A mí</button>
-        <button class="boton" data-word="4">A la gente de mi país</button>
-        <button class="boton" data-word="5"> A mis
-            hermanos</button>
+    <div class="profiles-container">
+        <div id="miranda" class="profile">
+          <img src="../imagen/miranda.png" alt="Miranda">
+          <p>Miranda</p>
+        </div>
+        <div id="carlos" class="profile">
+          <img src="../imagen/carlos.png" alt="Carlos">
+          <p>Carlos</p>
+        </div>
+        <div id="sofia" class="profile">
+          <img src="../imagen/sofia.png" alt="Sofía">
+          <p>Sofía</p>
+        </div>
+        <div id="gaston" class="profile">
+          <img src="../imagen/gaston.png" alt="Gastón">
+          <p>Gastón</p>
+        </div>
+      </div>
+
+      <div class="questions-container">
+        <ol>
+            <li>
+                ¿Cuántos años tiene Carlos?
+                <div class="options">
+                    <button>A) 20</button>
+                    <button>B) 25</button>
+                    <button class="correct">C) 28</button>
+                </div>
+            </li>
+            <li>
+                ¿De dónde es Sofía Mulanovich?
+                <div class="options">
+                    <button>A) Rusia</button>
+                    <button class="correct">B) Perú</button>
+                    <button>C) Colombia</button>
+                </div>
+            </li>
+            <li>
+                ¿Qué deporte le gusta a Carlos?
+                <div class="options">
+                    <button class="correct">A) Fútbol</button>
+                    <button>B) Básquet</button>
+                    <button>C) Natación</button>
+                </div>
+            </li>
+            <li>
+                ¿A quién le gusta cocinar?
+                <div class="options">
+                    <button class="correct">A) Gastón</button>
+                    <button>B) Carlos</button>
+                    <button>C) Sofía</button>
+                </div>
+            </li>
+            <li>
+                ¿De dónde es Miranda?
+                <div class="options">
+                    <button class="correct">A) Argentina</button>
+                    <button>B) España</button>
+                    <button>C) Mexico</button>
+                </div>
+            </li>
+        </ol>
     </div>
 
     <!-- Modal -->
@@ -76,41 +120,11 @@
             </div>
         </div>
     </div>
-    
-    <!-- Modal -->
-    <div id="miModal" class="modaldato">
-        <div class="modal-contenido">
-            <div class="cerrar-container">
-                <span class="cerrar">&times;</span>
-            </div>
-            <h2>Gramática: El verbo gustar</h2>
-            <p>El verbo <em>gustar</em> es un verbo especial, solo tiene 2 conjugaciones. Siempre necesita el uso
-                de los pronombres me, te, le, nos, les.</p>
-            <p>Hay varios verbos similares a la estructura del verbo gustar, por ejemplo: encantar,
-                fascinar, interesar, preocupar, doler, molestar, etc.</p>
-            <div class="lado">
-                <div class="izquierda">
-                    <p>A mí me</p>
-                    <p>A ti te</p>
-                    <p>A él / A ella / A usted le</p>
-                    <p>A nosotros nos</p>
-                    <p>A ellos / A ellas / A ustedes les</p>
-                </div>
-                <div class="derecha">
-                    <p>gusta el ceviche peruano.</p>
-                    <p>gusta viajar a Latinoamérica.</p>
-                    <p>gustan los chocolates.</p>
-                </div>
-                <div class="linea"></div>
-                <div class="llave"></div>
-            </div>
-        </div>
-    </div>
 
     <div id="modal" class="modalNext">
         <div class="modalNext-content">
             <p>¡BIEN HECHO!</p>
-            <p>¡RETO 2 COMPLETADO!</p>
+            <p>¡RETO 3 COMPLETADO!</p>
         </div>
     </div>
 
@@ -121,16 +135,18 @@
     <svg id="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
         <defs>
             <linearGradient id="linear-gradient" x1="24" y1="48" x2="24" y2="0" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#27e9de"/>
-                <stop offset="0.52" stop-color="#03a4ec"/>
-                <stop offset="1" stop-color="#2547a8"/>
+                <stop offset="0" stop-color="#27e9de" />
+                <stop offset="0.52" stop-color="#03a4ec" />
+                <stop offset="1" stop-color="#2547a8" />
             </linearGradient>
         </defs>
-        <circle cx="24" cy="24" r="21" stroke="url(#linear-gradient)" stroke-width="2" fill="none"/>
-        <path d="M15 24h14M24 18l6 6-6 6" stroke="url(#linear-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="21" stroke="url(#linear-gradient)" stroke-width="2" fill="none" />
+        <path d="M15 24h14M24 18l6 6-6 6" stroke="url(#linear-gradient)" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
     </svg>
 
-    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="sound-icon">
+    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+        id="sound-icon">
         <path fill-rule="evenodd" clip-rule="evenodd"
             d="M10.4 1.8C11.5532 0.262376 14 1.07799 14 3.00001V21.1214C14 23.0539 11.5313 23.8627 10.3878 22.3049L6.49356 17H4C2.34315 17 1 15.6569 1 14V10C1 8.34315 2.34315 7 4 7H6.5L10.4 1.8ZM12 3L8.1 8.2C7.72229 8.70361 7.12951 9 6.5 9H4C3.44772 9 3 9.44772 3 10V14C3 14.5523 3.44772 15 4 15H6.49356C7.13031 15 7.72901 15.3032 8.10581 15.8165L12 21.1214V3Z"
             fill="#0F0F0F" />
@@ -151,7 +167,7 @@
             fill="#0F0F0F" />
     </svg>
 
-    <script src="sc2.js"></script>
+    <script src="sc3.js"></script>
 </body>
 
 </html>

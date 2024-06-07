@@ -250,7 +250,9 @@ body {
     margin: 0;
     font-weight: bold;
 }
-
+.icono-ayuda{
+    width: 80px;
+}
 
 .modal-buttons button:hover {
     background-color: rgb(119, 217, 255);
@@ -510,7 +512,10 @@ ul li {
     }
 
     .botones {
+        display: grid;
         margin-left: 25px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        grid-template-rows: auto auto;
     }
 
 }

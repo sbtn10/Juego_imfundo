@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const charactersModal = document.getElementById('charactersModal');
     const showCharactersBtn = document.getElementById('showCharactersBtn');
     const closeBtns = document.querySelectorAll('.close');
-    const restartBtn = document.getElementById('restartBtn');
-    charactersModal.style.display = 'block';
     const muteIcon = document.querySelector('#mute-icon');
     const soundIcon = document.querySelector('#sound-icon');
     var audio = document.querySelector('#audioElement');

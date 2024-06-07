@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let attempts = 0;
     let selectedButton = null;
     let correctMatches = 0;
+    var modal = document.getElementById('miModal'); // Muestra el modal
+    modal.style.display = 'block';
 
     // Sonidos
     const audioCorrecto = new Audio('../audio/correcto.mp3');
