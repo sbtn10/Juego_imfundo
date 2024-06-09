@@ -16,9 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function checkAnswer(selectedOption) {
         const correctAnswer = selectedOption.parentElement.querySelector('.correct');
         const selectedAnswer = selectedOption.textContent.trim();
-    
+
         if (selectedAnswer === correctAnswer.textContent) {
-            audioCorrecto.currentTime = 0; // Reinicia el audio si aún está reproduciéndose
+            if (!audioCorrecto.paused) {
+                audioCorrecto.currentTime = 0; // Reinicia el audio si aún está reproduciéndose
+            }
             audioCorrecto.play();
             selectedOption.style.backgroundColor = 'green';
             currentQuestion++;
@@ -47,7 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 1200);
             }
         } else {
-            audioIncorrecto.currentTime = 0; // Reinicia el audio si aún está reproduciéndose
+            if (!audioIncorrecto.paused) {
+                audioIncorrecto.currentTime = 0; // Reinicia el audio si aún está reproduciéndose
+            }
             audioIncorrecto.play();
             selectedOption.style.backgroundColor = 'red';
             lives--;
@@ -58,10 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+
     
 
     questions.forEach(question => {
-        const options = question.querySelectorAll('.questions button');
+        const options = question.querySelectorAll('.options button');
         options.forEach(option => {
             option.addEventListener('click', function () {
                 checkAnswer(option);

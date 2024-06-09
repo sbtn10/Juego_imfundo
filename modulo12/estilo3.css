@@ -22,63 +22,9 @@ body {
 .texto {
     font-size: 15px;
     font-weight: bold;
-    color: #fff;
-}
-
-.modalNext {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-}
-
-.modalNext-content {
-    background: linear-gradient(to top, #f88f32, #ffbb77);
-    margin: 0 auto;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 20%;
-    text-align: center;
-    animation: modalFadeIn 0.5s ease-out;
-    position: relative;
-}
-.modalNext.show {
-    opacity: 1;
-}
-
-.modalNext.hide {
-    opacity: 0;
-}
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.modalNext-content p {
-    font-size: 1.5em;
     color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    font-weight: bold;
 }
-.icono-ayuda{
-    width: 80px;
-}
+
 
 .info {
     align-items: center;
@@ -117,15 +63,145 @@ body {
     margin-bottom: 40px;
     font-size: 20px;
 }
-.contenedortexto {
-    width: 800px;
-    background: #fff; 
+
+.selected {
+    transform: scale(1.1);
+    border-color: rgb(153, 255, 0);
+    color: black !important;
+    background-color: rgb(210, 241, 197) !important;
+}
+
+.destroyed {
+    opacity: 0.5;
+    /* Reducir la opacidad */
+    filter: grayscale(100%);
+    pointer-events: none;
+    /* Desactivar los eventos del mouse */
+    cursor: default;
+    /* Cambiar el cursor a predeterminado */
+}
+
+.profiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 3%;
+    animation: vibrarLogo 1s infinite alternate;
+}
+
+.profile {
+    text-align: center;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2pc;
+    box-shadow: 0px 0px 10px rgba(58, 82, 159, 0.5);
+    transition: transform 0.3s;
+}
+
+.profile p {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #79838e;
+}
+
+.questions-container {
+    margin-top: 30px;
+    padding: 0 50px;
+}
+
+.questions-container ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.questions-container ol li {
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.options button {
+    margin-bottom: 10px;
+    padding: 10px;
     border: none;
+    background-image: linear-gradient(to top, #b4cbe7, #bdf0ff);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50%;
+}
+
+.options button:hover {
+    background-image: linear-gradient(to bottom, #2989fd, #95e4fb);
+}
+
+.modalperfil {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo oscuro */
+}
+
+.modalperfil-content {
+    background-image: linear-gradient(to right, #b4d6ff, #bdf0ff);
+    margin: 10% auto;
+    padding: 30px;
+    border: none;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto Condensed", sans-serif;
+    color: #000000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+    /* Transición suave */
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.contenedortexto {
+    width: 1000px;
+    background: #fff;
+    border: 2px solid #000;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 1%;
+    margin-left: 15%;
 }
 .header {
     display: flex;
@@ -166,109 +242,6 @@ body {
     width: 150px;
     height: auto;
 }
-.questions {
-    margin-top: 20px;
-}
-.questions p {
-    font-size: 16px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.questions .options {
-    display: flex;
-    gap: 10px;
-}
-.questions button {
-    box-shadow: 0px 0px 10px rgba(6, 101, 202, 0.5);
-    background-color: rgb(62, 124, 178);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.questions button:hover {
-    background-color: rgb(81, 157, 224);
-    color: white;
-}
-
-.questions button.correct-answer {
-    background-image:linear-gradient(to top, #bdf1a8, #89fb6a);
-    color: rgb(0, 0, 0);
-    cursor: default;
-    opacity: 1;
-}
-
-.questions button:disabled {
-    pointer-events: none;
-}
-
-.content::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-.selected {
-    transform: scale(1.1);
-    border-color: rgb(153, 255, 0);
-    color: black !important;
-    background-color: rgb(210, 241, 197) !important;
-}
-
-.destroyed {
-    opacity: 0.5;
-    /* Reducir la opacidad */
-    filter: grayscale(100%);
-    pointer-events: none;
-    /* Desactivar los eventos del mouse */
-    cursor: default;
-    /* Cambiar el cursor a predeterminado */
-}
-
-.messages {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    display: none;
-    font-size: 24px;
-    color: white;
-    text-align: center;
-}
-
-/* Estilos para los contenedores vacíos */
-.contenedor {
-    display: inline-block;
-    vertical-align: middle;
-    width: 89px;
-    height: 40px;
-    border: 1px solid #000;
-    margin: 0 5px;
-    border-radius: 2cap;
-    position: relative;
-    background-color: white;
-    box-shadow: 0px 0px 3px;
-    cursor: pointer;
-}
-
-
-/* Estilos para los botones dentro de los contenedores */
-.contenedor .boton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90px;
-    height: 40px;
-    border-radius: 2cap;
-    background-color: #cdf68f;
-    font-size: 18px;
-}
-
 .botones {
     margin-top: 80px;
     margin-left: 10%;
@@ -278,14 +251,25 @@ body {
     flex-wrap: wrap;
 }
 
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .botones button {
     margin-bottom: 15px;
     border-radius: 4cap;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    width: 110px;
-    height: 50px;
+    width: 200px;
+    height: 40px;
     margin-right: 15px;
     box-shadow: 0px 0px 10px rgba(6, 101, 202, 0.5);
     background-color: rgb(211, 229, 245);
@@ -294,6 +278,72 @@ body {
 .botones button:hover {
     background-color: rgb(81, 157, 224);
     color: white;
+}
+
+.options button.correct-answer {
+    background-image:linear-gradient(to top, #bdf1a8, #89fb6a);
+    color: rgb(0, 0, 0);
+    cursor: default;
+    opacity: 1;
+}
+
+.options button:disabled {
+    pointer-events: none;
+}
+
+.modalNext {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.modalNext-content {
+    background: linear-gradient(to top, #f88f32, #ffbb77);
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 20%;
+    text-align: center;
+    animation: modalFadeIn 0.5s ease-out;
+    position: relative;
+}
+
+.modalNext.show {
+    opacity: 1;
+}
+
+.modalNext.hide {
+    opacity: 0;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modalNext-content p {
+    font-size: 0.8em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    font-weight: bold;
 }
 
 /*************************/
@@ -329,6 +379,7 @@ body {
     text-align: center;
     margin-top: 50px;
 }
+
 
 .modal-buttons button {
     margin: 10px;
@@ -385,23 +436,6 @@ body {
     /* Habilitar scroll vertical si el contenido es demasiado largo */
 }
 
-.tabla-verbo {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.tabla-verbo th,
-.tabla-verbo td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-.tabla-verbo tr:hover {
-    background-color: #ddd;
-}
-
 .cerrar-container {
     position: absolute;
     top: 10px;
@@ -415,43 +449,50 @@ body {
     font-size: 24px;
 }
 
-.titulo-modal h2 {
-    color: #FFF;
-    /* Texto blanco */
-    font-family: 'Comic Sans MS', cursive;
-    margin-bottom: 10px;
+.lado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas de igual ancho */
+    position: relative;
 }
 
-.definicion p {
-    color: #FFF;
-    /* Texto blanco */
-    font-size: 18px;
-    margin-bottom: 20px;
+.derecha {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.ejemplos h3 {
-    color: #FFF;
-    /* Texto blanco */
-    font-family: 'Comic Sans MS', cursive;
-    margin-bottom: 10px;
+.linea {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    /* Posiciona la línea en el centro horizontal */
+    width: 2px;
+    /* Grosor de la línea */
+    background-color: black;
+    /* Color de la línea */
+    z-index: -1;
+    /* Coloca la línea detrás del contenido */
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #FFF;
-    /* Texto blanco */
-}
-
-.modalp {
-    font-size: 16px;
-    color: #FFF;
-    /* Texto blanco */
+.llave {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 1px);
+    /* Posiciona la parte de la llave a la derecha de la línea */
+    transform: translateY(-50%);
+    /* Centra verticalmente la parte de la llave */
+    width: 20px;
+    /* Ancho de la parte de la llave */
+    height: 20px;
+    /* Altura de la parte de la llave */
+    background-color: black;
+    /* Color de la llave */
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    /* Forma de la llave */
 }
 
 @keyframes corazonRoto {
@@ -471,6 +512,10 @@ ul li {
 
 .corazon-roto {
     animation: corazonRoto 1s ease forwards;
+}
+
+.icono-ayuda {
+    width: 80px;
 }
 
 /* Estilos para el icono de flecha */
@@ -521,7 +566,7 @@ ul li {
     fill: #655d5d;
 }
 
-#sound-icon{
+#sound-icon {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -531,6 +576,7 @@ ul li {
     fill: #000000;
     display: block;
 }
+
 
 @keyframes vibrarLogo {
     0% {
@@ -542,9 +588,30 @@ ul li {
     }
 }
 
-@media screen and (max-width: 1309px) and (min-width: 1010px) {
+@media (max-width: 600px) {
+    .modal-contenido {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .lado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .izquierda,
+    .derecha {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1309px) and (min-width: 935px) {
     body {
         margin: 0;
+    }
+
+    .modalNext-content p {
+        font-size: 1.5em;
     }
 
     .container {
@@ -587,8 +654,9 @@ ul li {
         margin-left: 5px;
     }
 
+
     .oraciones {
-        margin-left: 10%;
+        margin-left: 15%;
         float: left;
     }
 
@@ -598,9 +666,9 @@ ul li {
 
     .botones {
         margin-top: 50px;
-        flex-direction: column;
+        flex-direction: row;
         float: right;
-        margin-right: 10%;
+        margin-right: 20%;
     }
 
     .botones button {
@@ -614,7 +682,9 @@ ul li {
 }
 
 @media (min-width: 1310px) {
-
+    .modalNext-content p {
+        font-size: 1.5em;
+    }
 
     body {
         margin: 0;
@@ -634,11 +704,10 @@ ul li {
     .imagendato {
         display: flex;
         position: absolute;
-        width: 200px;
+        width: 300px;
         height: auto;
-        margin-left: 80%;
+        margin-left: 75%;
         margin-top: 8%;
-        animation: zoomAnimacion 5s infinite alternate;
     }
 
     .info {
@@ -677,8 +746,9 @@ ul li {
 
     .botones {
         margin-top: 50px;
+        margin-right: 200px;
+        float: right;
         flex-direction: column;
-        margin-left: 80% !important;
 
     }
 
@@ -690,24 +760,4 @@ ul li {
         margin-top: 15px;
     }
 
-
-
-}
-
-@keyframes zoomAnimacion {
-    0% {
-        transform: scale(1);
-    }
-
-    /* Estado inicial, sin zoom */
-    50% {
-        transform: scale(1.2);
-    }
-
-    /* Zoom al 120% a la mitad de la animación */
-    100% {
-        transform: scale(1);
-    }
-
-    /* Regresar al tamaño original al final de la animación */
 }
