@@ -417,6 +417,7 @@ ul li {
     height: 25px;
     cursor: pointer;
     fill: #000000;
+    display: none;
 }
 
 /* Estilos cuando se pasa el cursor sobre el icono */
@@ -424,6 +425,16 @@ ul li {
     fill: #655d5d;
 }
 
+#sound-icon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #000000;
+    display: block;
+}
 
 @keyframes vibrarLogo {
     0% {

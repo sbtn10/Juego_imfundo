@@ -1,12 +1,26 @@
 const muteIcon = document.querySelector('#mute-icon');
+const soundIcon = document.querySelector('#sound-icon');
 var audio = document.querySelector('#audioElement');
 audio.volume = 0.03;
 
 let isMuted = false;
 
+soundIcon.addEventListener('click', () => {
+    audio.volume = isMuted ? 0.03 : 0;
+    isMuted = !isMuted;
+    const icono = document.getElementById("mute-icon");
+    const icon = document.getElementById("sound-icon");
+    icon.style.display = 'none';
+    icono.style.display = 'block';
+});
+
 muteIcon.addEventListener('click', () => {
     audio.volume = isMuted ? 0.03 : 0;
     isMuted = !isMuted;
+    const icono = document.getElementById("mute-icon");
+    const icon = document.getElementById("sound-icon");
+    icon.style.display = 'block';
+    icono.style.display = 'none';
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -18,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let attempts = 0;
     let selectedButton = null;
     let correctMatches = 0;
+    var modal = document.getElementById('miModal');
+        
+    // Muestra el modal
+    modal.style.display = 'block';
 
     // Sonidos
     const audioCorrecto = new Audio('../audio/correcto.mp3');
