@@ -150,8 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const salirBtn = document.getElementById('salirBtn');
 
         reintentarBtn.addEventListener('click', () => {
-            modalGameOver.style.display = 'none';
-            window.location.href = 'game4.html';
+            window.location.reload();
         });
 
         salirBtn.addEventListener('click', () => {

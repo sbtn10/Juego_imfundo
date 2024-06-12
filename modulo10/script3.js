@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.classList.add("show");
             arrowIcon.style.display = 'inline-block'; // Cambia 'inline-block' según el estilo de la flecha en tu CSS
             arrowIcon.addEventListener('click', function() {
-                window.location.href = '../final.html';
+                window.location.href = 'game4.html';
             });
             setTimeout(() => {
                 modal.classList.remove("show");
@@ -159,8 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const salirBtn = document.getElementById('salirBtn');
 
         reintentarBtn.addEventListener('click', function () {
-            modalGameOver.style.display = 'none';
-            window.location.href = '6game1.html'
+            window.location.reload();
         });
 
         salirBtn.addEventListener('click', function () {

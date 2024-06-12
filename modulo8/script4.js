@@ -203,8 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         reintentarBtn.addEventListener('click', () => {
-            modalGameOver.style.display = 'none';
-            window.location.href = 'game3.html';
+            window.location.reload();
         });
 
         salirBtn.addEventListener('click', () => {

@@ -159,8 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const salirBtn = document.getElementById('salirBtn');
 
         reintentarBtn.addEventListener('click', function () {
-            modalGameOver.style.display = 'none';
-            window.location.href = 'game3.html'
+            window.location.reload();
         });
 
         salirBtn.addEventListener('click', function () {

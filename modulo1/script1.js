@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         word.addEventListener('click', selectWord);
     });
 
-    reintentarBtn.addEventListener('click', () => window.location.href = 'game3.html');
+    reintentarBtn.addEventListener('click', () => window.location.reload());
     salirBtn.addEventListener('click', () => window.location.href = '../index.html');
 
     function toggleSound() {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 modal.classList.add("show");
                 arrowIcon.style.display = 'inline-block';
                 arrowIcon.addEventListener('click', function() {
-                    window.location.href = '../final.html';
+                    window.location.href = 'game2.html';
                 });
     
                 // Ocultar el modal después de 10 segundos
