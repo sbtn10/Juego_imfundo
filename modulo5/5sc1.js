@@ -179,13 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500); // La duración de la transición es de 0.5 segundos
     }
 
-    var closeSVG = document.querySelector(".close-svg");
-
-    // Función para manejar el clic en el SVG de cierre
-    function handleCloseClick() {
-        // Redirigir a la página de inicio
-        window.location.href = "https://www.ejemplo.com";
-    }
 
 
     function playAudio(audio) {
