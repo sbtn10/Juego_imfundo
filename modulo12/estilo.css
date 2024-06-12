@@ -70,7 +70,7 @@ body {
 }
 
 .modalNext-content p {
-    font-size: 1.5em;
+    font-size: 0.8em;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -460,7 +460,9 @@ ul li {
         margin-left: auto;
         margin-right: auto;
     }
-
+    .modalNext-content p {
+        font-size: 1.0em;
+    }
     .texto {
         font-size: 18px;
     }
@@ -533,7 +535,9 @@ ul li {
         margin-left: auto;
         margin-right: auto;
     }
-
+    .modalNext-content p {
+        font-size: 1.5em;
+    }
     .texto {
         font-size: 18px;
     }

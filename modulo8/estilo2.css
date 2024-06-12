@@ -332,7 +332,9 @@ body {
     margin-left: 20%;
     margin-right: 10%;
 }
-
+.modalNext-content p{
+    font-size: 1.5em;
+}
 
 
 
