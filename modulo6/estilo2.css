@@ -482,6 +482,12 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .tabla-verbo {
+        font-size: 11px; 
+    }
+}
+
 @media (min-width: 1310px) {
     
 
@@ -507,6 +513,7 @@ body {
         height: auto;
         margin-left: 80%;
         margin-top: 8%;
+        animation: vibrarLogo 1s infinite alternate;
     }
     
     .info {

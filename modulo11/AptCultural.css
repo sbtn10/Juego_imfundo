@@ -623,6 +623,7 @@ ul li {
         margin-left: 80%;
         margin-top: 8%;
         animation: zoomAnimacion 5s infinite alternate;
+        border-radius: 5cap;
     }
 
     .info {

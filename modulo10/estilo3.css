@@ -6,8 +6,9 @@ body {
 
 .contenedortexto p2 {
 
-    font-size: 17px;  
+    font-size: 17px;
 }
+
 .container {
     background-image: linear-gradient(to right, #5f66e2, #414478);
     border-radius: 0.4pc;
@@ -43,19 +44,25 @@ body {
     background-color: #FFFFFF;
     border-radius: 10px;
 }
+
 ol {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 li {
-    margin-bottom: 20px; /* Añade espacio entre las preguntas */
+    margin-bottom: 20px;
+    /* Añade espacio entre las preguntas */
 }
+
 .p2 {
     font-size: 18px;
     line-height: 1.5;
-    margin: 0; /* Elimina los márgenes predeterminados */
+    margin: 0;
+    /* Elimina los márgenes predeterminados */
 }
+
 .imagendato {
     display: none;
 }
@@ -147,8 +154,9 @@ li {
 
 .options {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    flex-direction: row;
+    margin-top: 15px;
+    gap: 15px;
 }
 
 .options button {
@@ -162,7 +170,7 @@ li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 30%;
+    width: 35%;
 }
 
 .options button:hover {
@@ -193,9 +201,12 @@ li {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    margin: 20px; /* Añade márgenes alrededor del contenedor */
-    overflow: hidden; /* Evita desbordamientos */
-    box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
+    margin: 20px;
+    /* Añade márgenes alrededor del contenedor */
+    overflow: hidden;
+    /* Evita desbordamientos */
+    box-sizing: border-box;
+    /* Incluye padding y borde dentro del tamaño total */
 }
 
 .header {
@@ -219,14 +230,16 @@ li {
 .title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px; /* Añade espacio entre el título y el contenido */
+    margin-bottom: 20px;
+    /* Añade espacio entre el título y el contenido */
 }
 
 .content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 20px; /* Añade espacio entre el contenido y las preguntas */
+    margin-bottom: 20px;
+    /* Añade espacio entre el contenido y las preguntas */
 }
 
 
@@ -592,24 +605,24 @@ li {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .questions-container ol li {
         font-size: 18px;
     }
-    
+
     .contenedortexto {
         margin-left: 10%;
     }
-    
+
     .texto {
         font-size: 18px;
     }
-    
-    .content { 
+
+    .content {
         font-family: "Playfair Display", serif;
         font-size: 20px;
     }
-    
+
     .info {
         margin-left: auto;
         padding: 7px;
@@ -621,68 +634,73 @@ li {
         background-color: #FFFFFF;
         border-radius: 10px;
     }
-    
+
     .info p {
         font-family: 'Inter', sans-serif;
         font-size: 16px;
         font-weight: 800;
         display: flex;
     }
-    
+
     .info svg {
         width: 20px;
         height: 20px;
         margin-left: 5px;
     }
-    
+
     .content img.inca {
         display: block;
     }
-    
+
     .content img.llama {
         display: block;
     }
-    
+
     .oraciones {
         margin-left: 15%;
         float: left;
     }
-    
+
     .oraciones p {
         font-size: 25px;
     }
-    
+
     .botones {
         margin-top: 50px;
         flex-direction: row;
         float: right;
         margin-right: 20%;
     }
-    
+
     .botones button {
         margin-bottom: 45px;
         margin-right: 15px;
     }
-    
+
     .img {
         margin-top: 15px;
     }
-    
+
     .imagen-chocolate {
-        display: none; /* Oculta el contenedor de la imagen */
+        display: none;
+        /* Oculta el contenedor de la imagen */
     }
-    
+
     .imagen-chocolate img {
-        display: none; /* Oculta la imagen */
+        display: none;
+        /* Oculta la imagen */
     }
-    
+
     .contenedortexto {
         margin-left: 8%;
-        margin-right: 8%; /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
-        display: flex; /* Hace que el contenedor de texto se comporte como un contenedor flex */
+        margin-right: 8%;
+        /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
+        display: flex;
+        /* Hace que el contenedor de texto se comporte como un contenedor flex */
         /* Alinea los elementos del contenedor de texto en la parte superior */
     }
 }
+
 @media screen and (max-width: 1065px) and (min-width: 601px) {
     body {
         margin: 0;
@@ -698,24 +716,24 @@ li {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .questions-container ol li {
         font-size: 18px;
     }
-    
+
     .contenedortexto {
         margin-left: 10%;
     }
-    
+
     .texto {
         font-size: 18px;
     }
-    
-    .content { 
+
+    .content {
         font-family: "Playfair Display", serif;
         font-size: 20px;
     }
-    
+
     .info {
         margin-left: auto;
         padding: 7px;
@@ -727,65 +745,69 @@ li {
         background-color: #FFFFFF;
         border-radius: 10px;
     }
-    
+
     .info p {
         font-family: 'Inter', sans-serif;
         font-size: 16px;
         font-weight: 800;
         display: flex;
     }
-    
+
     .info svg {
         width: 20px;
         height: 20px;
         margin-left: 5px;
     }
-    
+
     .content img.inca {
         display: block;
     }
-    
+
     .content img.llama {
         display: block;
     }
-    
+
     .oraciones {
         margin-left: 15%;
         float: left;
     }
-    
+
     .oraciones p {
         font-size: 25px;
     }
-    
+
     .botones {
         margin-top: 50px;
         flex-direction: row;
         float: right;
         margin-right: 20%;
     }
-    
+
     .botones button {
         margin-bottom: 45px;
         margin-right: 15px;
     }
-    
+
     .img {
         margin-top: 15px;
     }
-    
+
     .imagen-chocolate {
-        display: none; /* Oculta el contenedor de la imagen */
+        display: none;
+        /* Oculta el contenedor de la imagen */
     }
-    
+
     .imagen-chocolate img {
-        display: none; /* Oculta la imagen */
+        display: none;
+        /* Oculta la imagen */
     }
-    
+
     .contenedortexto {
         margin-left: 8%;
-        margin-right: 8%; /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
-        display: flex; /* Hace que el contenedor de texto se comporte como un contenedor flex */
+        margin-right: 8%;
+        /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
+        display: flex;
+        /* Hace que el contenedor de texto se comporte como un contenedor flex */
         /* Alinea los elementos del contenedor de texto en la parte superior */
     }
 }
@@ -805,17 +827,20 @@ li {
         margin-left: auto;
         margin-right: auto;
     }
-    .questions-container ol li{
+
+    .questions-container ol li {
         font-size: 18px;
     }
-    .contenedortexto{
+
+    .contenedortexto {
         margin-left: 10%;
     }
+
     .texto {
         font-size: 18px;
     }
 
-    .content { 
+    .content {
         font-family: "Playfair Display", serif;
         font-size: 20px;
     }
@@ -848,7 +873,7 @@ li {
     .content img.inca {
         display: block;
     }
-    
+
     .content img.llama {
         display: block;
     }
@@ -877,28 +902,37 @@ li {
     .img {
         margin-top: 15px;
     }
+
     .imagen-chocolate {
-        margin-top: 0px; /* Ajusta el margen superior para que la imagen entre en el espacio en blanco */
+        margin-top: 0px;
+        /* Ajusta el margen superior para que la imagen entre en el espacio en blanco */
         border: 2px solid #ccc;
         border-radius: 10px;
         overflow: hidden;
         display: flex;
         align-items: center;
-        margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
-        height: 100%; /* Ajusta la altura al 100% para que se expanda verticalmente según el contenido */
+        margin-right: 20px;
+        /* Ajusta el margen derecho según sea necesario */
+        height: 100%;
+        /* Ajusta la altura al 100% para que se expanda verticalmente según el contenido */
     }
-    
+
     .imagen-chocolate img {
         width: 100%;
-        height: 220px; /* Ajusta la altura de la imagen automáticamente según el ancho */
-        object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor manteniendo la relación de aspecto */
-        margin-right: 1000px; /* Ajusta el margen derecho de la imagen según sea necesario */
+        height: 220px;
+        /* Ajusta la altura de la imagen automáticamente según el ancho */
+        object-fit: cover;
+        /* Ajusta la imagen para que cubra todo el contenedor manteniendo la relación de aspecto */
+        margin-right: 1000px;
+        /* Ajusta el margen derecho de la imagen según sea necesario */
     }
-    
+
     .contenedortexto {
         margin-left: 8%;
-        margin-right: 8%; /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
-        display: flex; /* Hace que el contenedor de texto se comporte como un contenedor flex */
+        margin-right: 8%;
+        /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
+        display: flex;
+        /* Hace que el contenedor de texto se comporte como un contenedor flex */
         /* Alinea los elementos del contenedor de texto en la parte superior */
     }
 }
@@ -912,7 +946,10 @@ li {
         margin: 0;
     }
 
-    
+
+    .options button {
+        width: 20%;
+    }
 
     .container {
         max-width: 1289px;
@@ -925,7 +962,7 @@ li {
         font-size: 18px;
     }
 
-    .content { 
+    .content {
         font-family: "Playfair Display", serif;
         font-size: 20px;
     }
@@ -949,6 +986,10 @@ li {
         font-size: 18px;
     }
 
+    .questions-container{
+        margin-left: 15%;
+    }
+
     .info {
         margin-left: auto;
         padding: 7px;
@@ -960,7 +1001,7 @@ li {
         background-color: #FFFFFF;
         border-radius: 10px;
     }
-   
+
     .info p {
         font-family: 'Inter', sans-serif;
         font-size: 16px;
@@ -990,41 +1031,52 @@ li {
         flex-direction: column;
 
     }
-
+.options{
+    margin-left: 15%;
+}
     .botones button {
         margin-bottom: 45px;
     }
 
-        .content img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 10;
-           
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .imagen-chocolate {
-            margin-top: 0px; /* Ajusta el margen superior para que la imagen entre en el espacio en blanco */
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
-            height: 100%; /* Ajusta la altura al 100% para que se expanda verticalmente según el contenido */
-        }
-        
-        .imagen-chocolate img {
-            width: 100%;
-            height: 220px; /* Ajusta la altura de la imagen automáticamente según el ancho */
-            object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor manteniendo la relación de aspecto */
-            margin-right: 1000px; /* Ajusta el margen derecho de la imagen según sea necesario */
-        }
-        
-        .contenedortexto {
-            margin-left: 8%;
-            margin-right: 8%; /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
-            display: flex; /* Hace que el contenedor de texto se comporte como un contenedor flex */
-            /* Alinea los elementos del contenedor de texto en la parte superior */
-        }
+    .content img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 10;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagen-chocolate {
+        margin-top: 0px;
+        /* Ajusta el margen superior para que la imagen entre en el espacio en blanco */
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        /* Ajusta el margen derecho según sea necesario */
+        height: 100%;
+        /* Ajusta la altura al 100% para que se expanda verticalmente según el contenido */
+    }
+
+    .imagen-chocolate img {
+        width: 100%;
+        height: 220px;
+        /* Ajusta la altura de la imagen automáticamente según el ancho */
+        object-fit: cover;
+        /* Ajusta la imagen para que cubra todo el contenedor manteniendo la relación de aspecto */
+        margin-right: 1000px;
+        /* Ajusta el margen derecho de la imagen según sea necesario */
+    }
+
+    .contenedortexto {
+        margin-left: 8%;
+        margin-right: 8%;
+        /* Ajusta el margen derecho del texto para que coincida con el margen de la imagen */
+        display: flex;
+        /* Hace que el contenedor de texto se comporte como un contenedor flex */
+        /* Alinea los elementos del contenedor de texto en la parte superior */
+    }
 
 }

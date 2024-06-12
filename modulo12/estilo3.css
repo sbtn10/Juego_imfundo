@@ -131,8 +131,9 @@ body {
 
 .options {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 15px;
+    gap: 15px;
 }
 
 .options button {
@@ -146,7 +147,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 50%;
+    width: 40%;
 }
 
 .options button:hover {
