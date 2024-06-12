@@ -51,7 +51,7 @@ ol {
 li {
     margin-bottom: 20px; /* Añade espacio entre las preguntas */
 }
-p2 {
+.p2 {
     font-size: 18px;
     line-height: 1.5;
     margin: 0; /* Elimina los márgenes predeterminados */
@@ -148,7 +148,7 @@ p2 {
 .options {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px; /* Añade espacio entre las opciones */
+    margin-top: 10px;
 }
 
 .options button {
@@ -162,7 +162,7 @@ p2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 50%;
+    width: 30%;
 }
 
 .options button:hover {

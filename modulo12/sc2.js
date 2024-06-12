@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modal2.classList.add("show");
             flecha.style.display = 'block'; // Muestra la flecha al completar todo el juego
             flecha.addEventListener('click', () => {
-                window.location.href = '../final.html'; // Redirige a game3.html al hacer clic en la flecha
+                window.location.href = 'game3.html'; // Redirige a game3.html al hacer clic en la flecha
             });
             setTimeout(() => {
                 modal2.classList.remove("show");
